@@ -1,5 +1,6 @@
 baseURL = 'https://charliehart.dev/'
 languageCode = 'en-gb'
+publishDir = "docs"
 title = 'charliehart.dev'
 theme = 'PaperMod'
 paginate = 5
@@ -115,9 +116,9 @@ ShowPageNums = true
 ShowToc = false
 
   [params.homeInfoParams]
-  Title = "Homepage title text"
+  Title = "charliehart.dev"
   Content = """
-homepage content text (this can be markdown)
+Welcome to charliehart.dev! Read the below posts to find out about my recent projects! Site is currently a work in progress!
 """
 
   [[params.socialIcons]]
