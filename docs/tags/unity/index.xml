@@ -6,17 +6,8 @@
     <description>Recent content in Unity on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jan 2024 11:19:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jan 2024 14:12:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/tags/unity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Voxel Rendering and World Generation System</title>
-      <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
-      <pubDate>Wed, 17 Jan 2024 11:19:00 +0000</pubDate>
-      <guid>https://charliehart.dev/3d/voxel-world-diss-en/</guid>
-      <description>Project Summary My undergraduate dissertation project was to create and optimise a voxel based rendering and world generation system.
-Dissertation Try It! Required Device: Windows PC
-Development </description>
-    </item>
     <item>
       <title>Double-Barrelled Doppelgänger</title>
       <link>https://charliehart.dev/2d/doppelganger-en/</link>
