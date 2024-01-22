@@ -1,0 +1,142 @@
+baseURL = 'https://charliehart.dev/'
+languageCode = 'en-gb'
+title = 'charliehart.dev'
+theme = 'PaperMod'
+paginate = 5
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+mainsections = [ "2D", "3D", "Misc" ]
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = ":gb:"
+weight = 1
+
+[[languages.en.menu.main]]
+name = "2D Projects"
+url = "2d/"
+weight = 4
+
+[[languages.en.menu.main]]
+name = "3D Projects"
+url = "3d/"
+weight = 5
+
+[[languages.en.menu.main]]
+name = "Misc Projects"
+url = "misc/"
+weight = 6
+
+[[languages.en.menu.main]]
+name = "Search"
+url = "search/"
+weight = 10
+
+[[languages.en.menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
+
+
+
+
+
+
+[languages.de]
+languageName = ":de:"
+weight = 2
+title = "charliehart.dev DE"
+
+[[languages.de.menu.main]]
+name = "2D-Projekte"
+url = "2d/"
+weight = 4
+
+[[languages.de.menu.main]]
+name = "3D-Projekte"
+url = "3d/"
+weight = 5
+
+[[languages.de.menu.main]]
+name = "Sonstige Projekte"
+url = "misc/"
+weight = 6
+
+[[languages.de.menu.main]]
+name = "Suchen"
+url = "search/"
+weight = 10
+
+[[languages.de.menu.main]]
+name = "Tags"
+url = "tags/"
+weight = 10
+
+
+  [languages.de.params]
+  languageAltTitle = "German"
+
+    [languages.de.params.homeInfoParams]
+  Title = "Charliehart.dev DE"
+  Content = """
+Willkommen bei charliehart.dev DE
+"""
+
+
+
+
+
+
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+env = "production"
+description = "SEO site description here"
+author = "Charlie Hart"
+defaultTheme = "auto"
+ShowShareButtons = false
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowAllPagesInArchive = true
+ShowPageNums = true
+ShowToc = false
+
+  [params.homeInfoParams]
+  Title = "Homepage title text"
+  Content = """
+homepage content text (this can be markdown)
+"""
+
+  [[params.socialIcons]]
+  name = "github"
+  title = "My Github Profile"
+  url = "https://github.com/CharlieHart0"
+
+  [params.assets]
+  disableHLJS = true
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
+
