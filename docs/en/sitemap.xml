@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://charliehart.dev/tags/2d/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <loc>https://charliehart.dev/tags/3d/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
   </url><url>
-    <loc>https://charliehart.dev/2d/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <loc>https://charliehart.dev/3d/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/c-sharp/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -21,17 +24,14 @@
                 href="https://charliehart.dev/"
                 />
   </url><url>
-    <loc>https://charliehart.dev/2d/doppelganger-en/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
-  </url><url>
-    <loc>https://charliehart.dev/tags/game-jam/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <loc>https://charliehart.dev/tags/dissertation/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/pc/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/</loc>
-    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -44,6 +44,24 @@
                 />
   </url><url>
     <loc>https://charliehart.dev/tags/unity/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/university/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/3d/voxel-world-diss-en/</loc>
+    <lastmod>2024-01-17T11:19:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/2d/</loc>
+    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/2d/</loc>
+    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/game-jam/</loc>
+    <lastmod>2024-01-16T14:12:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/2d/doppelganger-en/</loc>
     <lastmod>2024-01-16T14:12:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/android/</loc>
@@ -54,8 +72,6 @@
   </url><url>
     <loc>https://charliehart.dev/2d/language-game-en/</loc>
     <lastmod>2024-01-12T15:57:00+00:00</lastmod>
-  </url><url>
-    <loc>https://charliehart.dev/3d/</loc>
   </url><url>
     <loc>https://charliehart.dev/categories/</loc>
     <xhtml:link
