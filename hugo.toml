@@ -87,7 +87,7 @@ weight = 10
     [languages.de.params.homeInfoParams]
   Title = "Charliehart.dev DE"
   Content = """
-Willkommen bei charliehart.dev DE
+Willkommen bei charliehart.dev DE! Die deutsche Version dieser Website befindet sich derzeit noch im Aufbau :/
 """
 
 
@@ -118,7 +118,7 @@ ShowToc = false
   [params.homeInfoParams]
   Title = "charliehart.dev"
   Content = """
-Welcome to charliehart.dev! Read the below posts to find out about my recent projects! Site is currently a work in progress!
+**Site is currently a work in progress!** Welcome to charliehart.dev! Read the below posts to find out about my recent projects, or [click here](https://charliehart.dev/tags) to search for posts by keyword tag, such as [C++](https://charliehert.dev/tags/cpp) or [Gamejam](https://charliehart.dev/tags/game-jam)!
 """
 
   [[params.socialIcons]]
