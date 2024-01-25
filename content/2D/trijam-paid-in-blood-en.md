@@ -1,7 +1,7 @@
 +++
 title = 'Trijam #226 - Paid in Blood'
 date = 2024-01-21T14:15:00Z
-draft = true
+draft = false
 tags = ['2D','Unity','PC','Game Jam']
 ShowToc = true
 +++
@@ -32,7 +32,7 @@ Clearing a room of enemies without taking damage restores a portion of the playe
 
 ## Development
 
-Development of this game was incredibly rushed, even moreso than a typical game jam, but heavy use of third party art made the game possible to finish in time. 
+Development of this game was of course done over a very short time frame, even moreso than a typical game jam, but heavy use of third party art assets was essential to allow me to finish the game on time. 
 
 The layout of the map is randomised every time, though each individual room is of course very similar, as the time constraints did not allow too much variation there.
 
