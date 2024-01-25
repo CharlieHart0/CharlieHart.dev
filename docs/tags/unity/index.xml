@@ -6,8 +6,16 @@
     <description>Recent content in Unity on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jan 2024 11:19:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jan 2024 14:15:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trijam #226 - Paid in Blood</title>
+      <link>https://charliehart.dev/2d/trijam-paid-in-blood-en/</link>
+      <pubDate>Sun, 21 Jan 2024 14:15:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/trijam-paid-in-blood-en/</guid>
+      <description>Project Summary &amp;lsquo;Paid in Blood&amp;rsquo; was my entry to Trijam #226, a game jam with the twist of being given only three hours to create your game! This does not include planning, compiling or uploading your game, only time spent actively creating the game.
+The theme for the jam was &amp;lsquo;You gain a little, you lose a little&amp;rsquo;. The idea I settled on for the game was a small roguelite, where the players health is used as a currency to unlock upgrades.</description>
+    </item>
     <item>
       <title>Voxel Rendering and World Generation System</title>
       <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
