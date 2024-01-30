@@ -6,8 +6,6 @@ tags = ['2D','Unity','PC','Game Jam','C Sharp']
 ShowToc = true
 +++
 
-## Project Summary
-
 Double-Barrelled Doppelgänger (DBD) was my entry to [Mini Jam 117](https://itch.io/jam/mini-jam-117-ghosts), a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was 'Ghosts', as the jam took place in October 2022, near halloween.
 
 The additional limitation for the jam's entries was 'Shotgun as a Mechanic', and so DBD features a noisemaker toy shotgun as one of it's core mechanics. 

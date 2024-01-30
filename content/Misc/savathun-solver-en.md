@@ -6,7 +6,7 @@ tags = ['Misc','C++','PC']
 ShowToc = true
 +++
 
-## Project Summary
+# 
 
 This project aimed to programatically solve a puzzle in the video game 'Destiny 2' and was the first program I created in C++ that was not a university project.
 

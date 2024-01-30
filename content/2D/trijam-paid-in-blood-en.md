@@ -6,15 +6,11 @@ tags = ['2D','Unity','PC','Game Jam']
 ShowToc = true
 +++
 
-## Project Summary
-
 'Paid in Blood' was my entry to [Trijam #226](https://itch.io/jam/trijam-226), a game jam with the twist of being given only three hours to create your game! This does not include planning, compiling or uploading your game, only time spent actively creating the game.
 
 The theme for the jam was 'You gain a little, you lose a little'. The idea I settled on for the game was a small roguelite, where the players health is used as a currency to unlock upgrades.
 
 <img title="" src="https://img.itch.zone/aW1hZ2UvMjE0NDcyMS8xMjY0OTQ4Ni5wbmc=/original/dPCMgV.png" alt="">
-
-
 
 ## Play Game
 

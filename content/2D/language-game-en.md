@@ -8,7 +8,7 @@ ShowToc = true
 
 <img title="" src="https://play-lh.googleusercontent.com/RcKFesX_kcjCwjzCw1kefi8ysdjfD6R6okb_oaJ0Ezvz-75ZGJxSY6gcff67_QG1fA=w526-h296" alt=""> 
 
-## Project Summary
+# 
 
 [The Language Game](https://play.google.com/store/apps/details?id=com.Zoidburger.LanguageGame) is a multiple choice quiz game made in Unity, inspired partly by the BBC quiz show "Richard Osman's House of Games". In the language round of the show, contestants are presented with a multiple choice question, with both the question and all four answers shown in a random foreign language. 
 

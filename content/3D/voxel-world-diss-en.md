@@ -6,8 +6,6 @@ tags = ['3D','Unity','PC','Dissertation','University','C Sharp']
 ShowToc = true
 +++
 
-## Project Summary
-
 My undergraduate dissertation project was to create and optimise a voxel based rendering and world generation system. Inspiration for this project was clearly drawn from Minecraft, one of the most popular games of all time, but also from games such as Astroneer - which uses a voxel system at the core of its player destructible world.
 
 I used Unity for this project, and created a voxel rendering system which was able to generate a set of triangular meshes, with the correct textures applied, to represent an inputted three dimensional array of blocks, which had been generated using smooth noise functions.
