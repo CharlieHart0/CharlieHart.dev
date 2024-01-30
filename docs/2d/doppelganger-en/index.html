@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Mini Jam 117- Double-Barrelled Doppelgänger | charliehart.dev</title>
 <meta name="keywords" content="2D, Unity, PC, Game Jam, C Sharp">
-<meta name="description" content="Project Summary Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
+<meta name="description" content="Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
 The additional limitation for the jam&rsquo;s entries was &lsquo;Shotgun as a Mechanic&rsquo;, and so DBD features a noisemaker toy shotgun as one of it&rsquo;s core mechanics.
 Play Game Double-Barreled Doppelgänger on Itch.io
 Required Device: Windows PC">
@@ -59,7 +59,7 @@ Required Device: Windows PC">
 
     </style>
 </noscript><meta property="og:title" content="Mini Jam 117- Double-Barrelled Doppelgänger" />
-<meta property="og:description" content="Project Summary Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
+<meta property="og:description" content="Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
 The additional limitation for the jam&rsquo;s entries was &lsquo;Shotgun as a Mechanic&rsquo;, and so DBD features a noisemaker toy shotgun as one of it&rsquo;s core mechanics.
 Play Game Double-Barreled Doppelgänger on Itch.io
 Required Device: Windows PC" />
@@ -70,7 +70,7 @@ Required Device: Windows PC" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mini Jam 117- Double-Barrelled Doppelgänger"/>
-<meta name="twitter:description" content="Project Summary Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
+<meta name="twitter:description" content="Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.
 The additional limitation for the jam&rsquo;s entries was &lsquo;Shotgun as a Mechanic&rsquo;, and so DBD features a noisemaker toy shotgun as one of it&rsquo;s core mechanics.
 Play Game Double-Barreled Doppelgänger on Itch.io
 Required Device: Windows PC"/>
@@ -102,12 +102,12 @@ Required Device: Windows PC"/>
   "@type": "BlogPosting",
   "headline": "Mini Jam 117- Double-Barrelled Doppelgänger",
   "name": "Mini Jam 117- Double-Barrelled Doppelgänger",
-  "description": "Project Summary Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was \u0026lsquo;Ghosts\u0026rsquo;, as the jam took place in October 2022, near halloween.\nThe additional limitation for the jam\u0026rsquo;s entries was \u0026lsquo;Shotgun as a Mechanic\u0026rsquo;, and so DBD features a noisemaker toy shotgun as one of it\u0026rsquo;s core mechanics.\nPlay Game Double-Barreled Doppelgänger on Itch.io\nRequired Device: Windows PC",
+  "description": "Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was \u0026lsquo;Ghosts\u0026rsquo;, as the jam took place in October 2022, near halloween.\nThe additional limitation for the jam\u0026rsquo;s entries was \u0026lsquo;Shotgun as a Mechanic\u0026rsquo;, and so DBD features a noisemaker toy shotgun as one of it\u0026rsquo;s core mechanics.\nPlay Game Double-Barreled Doppelgänger on Itch.io\nRequired Device: Windows PC",
   "keywords": [
     "2D", "Unity", "PC", "Game Jam", "C Sharp"
   ],
-  "articleBody": "Project Summary Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was ‘Ghosts’, as the jam took place in October 2022, near halloween.\nThe additional limitation for the jam’s entries was ‘Shotgun as a Mechanic’, and so DBD features a noisemaker toy shotgun as one of it’s core mechanics.\nPlay Game Double-Barreled Doppelgänger on Itch.io\nRequired Device: Windows PC\nGame Mechanics In DBD, you play as a ghost in a haunted mansion. You must escape from a team of ghostbusters who are trying to kill you, and who run towards the player to suck them into their vacuum packs.\nAs the ghost, you have no weapons or tools besides a single toy shotgun, which is able to make loud noises to scare the ghostbusters away, but will not kill them. You also have the ability to turn invisible for a short period of time.\nThe player has to both lure and scare away the ghostbusters, in order to defeat them using environmental hazards such as spikes.\nDevelopment In DBD, there are hidden trigger volumes which cause events to occur, such as torches lighting up to show the player hints as they progress through the levels. In order for this to work, I used UnityActions, a form of delegation in the Unity game engine. Each trigger zone can be assigned a UnityAction to call when the player enters the zone, and this UnityAction can in turn call several functions. This was essential in order to create trigger zones with varying behaviour in the short time frame I had to develop the game.\nRealtime lighting was used in the 2D scenes of the game, so that the player character’s torch could be used to explore the levels, and fit the halloween theme. This presented a few challenges, such as ambient lighting. The ambient lighting in the game was originally much brighter, but had to be darkened so that the other light sources in the game cast strong shadows, as this was one of the concepts that I really wanted in the game.\nSo that the player was still visible, a very weak point light was attached to the player, as the cone of light from the torch does not include the player’s position.\nGamejam Results 192 entries were submitted to Mini Jam 117, and DBD came in fourth place! Though I had experience working on personal projects before, this was my first time competing in a gamejam, and I was very happy to recieve many positive and constructive reviews from other contestants on Itch.io\n",
-  "wordCount" : "436",
+  "articleBody": "Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was ‘Ghosts’, as the jam took place in October 2022, near halloween.\nThe additional limitation for the jam’s entries was ‘Shotgun as a Mechanic’, and so DBD features a noisemaker toy shotgun as one of it’s core mechanics.\nPlay Game Double-Barreled Doppelgänger on Itch.io\nRequired Device: Windows PC\nGame Mechanics In DBD, you play as a ghost in a haunted mansion. You must escape from a team of ghostbusters who are trying to kill you, and who run towards the player to suck them into their vacuum packs.\nAs the ghost, you have no weapons or tools besides a single toy shotgun, which is able to make loud noises to scare the ghostbusters away, but will not kill them. You also have the ability to turn invisible for a short period of time.\nThe player has to both lure and scare away the ghostbusters, in order to defeat them using environmental hazards such as spikes.\nDevelopment In DBD, there are hidden trigger volumes which cause events to occur, such as torches lighting up to show the player hints as they progress through the levels. In order for this to work, I used UnityActions, a form of delegation in the Unity game engine. Each trigger zone can be assigned a UnityAction to call when the player enters the zone, and this UnityAction can in turn call several functions. This was essential in order to create trigger zones with varying behaviour in the short time frame I had to develop the game.\nRealtime lighting was used in the 2D scenes of the game, so that the player character’s torch could be used to explore the levels, and fit the halloween theme. This presented a few challenges, such as ambient lighting. The ambient lighting in the game was originally much brighter, but had to be darkened so that the other light sources in the game cast strong shadows, as this was one of the concepts that I really wanted in the game.\nSo that the player was still visible, a very weak point light was attached to the player, as the cone of light from the torch does not include the player’s position.\nGamejam Results 192 entries were submitted to Mini Jam 117, and DBD came in fourth place! Though I had experience working on personal projects before, this was my first time competing in a gamejam, and I was very happy to recieve many positive and constructive reviews from other contestants on Itch.io\n",
+  "wordCount" : "434",
   "inLanguage": "en",
   "datePublished": "2024-01-16T14:12:00Z",
   "dateModified": "2024-01-16T14:12:00Z",
@@ -224,8 +224,6 @@ Required Device: Windows PC"/>
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#project-summary" aria-label="Project Summary">Project Summary</a></li>
-                <li>
                     <a href="#play-game" aria-label="Play Game">Play Game</a></li>
                 <li>
                     <a href="#game-mechanics" aria-label="Game Mechanics">Game Mechanics</a></li>
@@ -239,8 +237,7 @@ Required Device: Windows PC"/>
     </details>
 </div>
 
-  <div class="post-content"><h2 id="project-summary">Project Summary<a hidden class="anchor" aria-hidden="true" href="#project-summary">#</a></h2>
-<p>Double-Barrelled Doppelgänger (DBD) was my entry to <a href="https://itch.io/jam/mini-jam-117-ghosts">Mini Jam 117</a>, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.</p>
+  <div class="post-content"><p>Double-Barrelled Doppelgänger (DBD) was my entry to <a href="https://itch.io/jam/mini-jam-117-ghosts">Mini Jam 117</a>, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &lsquo;Ghosts&rsquo;, as the jam took place in October 2022, near halloween.</p>
 <p>The additional limitation for the jam&rsquo;s entries was &lsquo;Shotgun as a Mechanic&rsquo;, and so DBD features a noisemaker toy shotgun as one of it&rsquo;s core mechanics.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
