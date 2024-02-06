@@ -6,33 +6,33 @@
     <description>Recent content in 2D on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 14:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jul 2023 14:15:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/tags/2d/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trijam #226 - Paid in Blood</title>
       <link>https://charliehart.dev/2d/trijam-paid-in-blood-en/</link>
-      <pubDate>Sun, 21 Jan 2024 14:15:00 +0000</pubDate>
+      <pubDate>Sun, 02 Jul 2023 14:15:00 +0000</pubDate>
       <guid>https://charliehart.dev/2d/trijam-paid-in-blood-en/</guid>
       <description>&amp;lsquo;Paid in Blood&amp;rsquo; was my entry to Trijam #226, a game jam with the twist of being given only three hours to create your game! This does not include planning, compiling or uploading your game, only time spent actively creating the game.
 The theme for the jam was &amp;lsquo;You gain a little, you lose a little&amp;rsquo;. The idea I settled on for the game was a small roguelite, where the players health is used as a currency to unlock upgrades.</description>
     </item>
     <item>
+      <title>The Language Game</title>
+      <link>https://charliehart.dev/2d/language-game-en/</link>
+      <pubDate>Mon, 23 Jan 2023 15:57:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/language-game-en/</guid>
+      <description>The Language Game is a multiple choice quiz game made in Unity, inspired partly by the BBC quiz show &amp;ldquo;Richard Osman&amp;rsquo;s House of Games&amp;rdquo;. In the language round of the show, contestants are presented with a multiple choice question, with both the question and all four answers shown in a random foreign language.
+Expanding upon this concept, my game allows the player to also correctly guess the language in which the question is being asked, in order to gain bonus points.</description>
+    </item>
+    <item>
       <title>Mini Jam 117- Double-Barrelled Doppelgänger</title>
       <link>https://charliehart.dev/2d/doppelganger-en/</link>
-      <pubDate>Tue, 16 Jan 2024 14:12:00 +0000</pubDate>
+      <pubDate>Sun, 16 Oct 2022 14:12:00 +0000</pubDate>
       <guid>https://charliehart.dev/2d/doppelganger-en/</guid>
       <description>Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &amp;lsquo;Ghosts&amp;rsquo;, as the jam took place in October 2022, near halloween.
 The additional limitation for the jam&amp;rsquo;s entries was &amp;lsquo;Shotgun as a Mechanic&amp;rsquo;, and so DBD features a noisemaker toy shotgun as one of it&amp;rsquo;s core mechanics.
 Play Game Double-Barreled Doppelgänger on Itch.io
 Required Device: Windows PC</description>
-    </item>
-    <item>
-      <title>The Language Game</title>
-      <link>https://charliehart.dev/2d/language-game-en/</link>
-      <pubDate>Fri, 12 Jan 2024 15:57:00 +0000</pubDate>
-      <guid>https://charliehart.dev/2d/language-game-en/</guid>
-      <description>The Language Game is a multiple choice quiz game made in Unity, inspired partly by the BBC quiz show &amp;ldquo;Richard Osman&amp;rsquo;s House of Games&amp;rdquo;. In the language round of the show, contestants are presented with a multiple choice question, with both the question and all four answers shown in a random foreign language.
-Expanding upon this concept, my game allows the player to also correctly guess the language in which the question is being asked, in order to gain bonus points.</description>
     </item>
   </channel>
 </rss>
