@@ -1,6 +1,7 @@
 +++
 title = 'Mini Jam 117- Double-Barrelled Doppelgänger'
-date = 2024-01-16T14:12:00Z
+date = 2022-10-16T14:12:00Z
+publishDate = 2024-01-16T14:12:00Z
 draft = false
 tags = ['2D','Unity','PC','Game Jam','C Sharp']
 ShowToc = true

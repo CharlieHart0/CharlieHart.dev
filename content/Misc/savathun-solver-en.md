@@ -1,6 +1,7 @@
 +++
 title = 'Programming the fun out of a videogame puzzle'
-date = 2024-01-18T16:23:00Z
+date = 2023-11-08T16:23:00Z
+publishDate = 2024-01-18T16:23:00Z
 draft = true
 tags = ['Misc','C++','PC']
 ShowToc = true

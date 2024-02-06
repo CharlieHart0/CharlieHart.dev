@@ -1,6 +1,7 @@
 +++
 title = 'Trijam #226 - Paid in Blood'
-date = 2024-01-21T14:15:00Z
+date = 2023-07-02T14:15:00Z
+publishDate = 2024-01-21T14:15:00Z
 draft = false
 tags = ['2D','Unity','PC','Game Jam']
 ShowToc = true
