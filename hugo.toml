@@ -38,7 +38,7 @@ weight = 6
 [[languages.en.menu.main]]
 name = "Search"
 url = "search/"
-weight = 10
+weight = 9
 
 [[languages.en.menu.main]]
 name = "Tags"
