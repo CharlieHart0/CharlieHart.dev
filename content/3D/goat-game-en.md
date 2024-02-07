@@ -1,7 +1,7 @@
 +++
 title = 'Goat Heist'
 date = 2023-12-14T13:41:00Z
-publishDate = 2024-02-02T10:56:00Z
+publishDate = 2024-02-01T10:56:00Z
 draft = false
 tags = ['3D','cpp','PC','University','Physics','AI']
 ShowToc = true
