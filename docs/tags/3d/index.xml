@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D on charliehart.dev</title>
+    <link>https://charliehart.dev/tags/3d/</link>
+    <description>Recent content in 3D on charliehart.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Dec 2023 13:41:00 +0000</lastBuildDate>
+    <atom:link href="https://charliehart.dev/tags/3d/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goat Heist</title>
+      <link>https://charliehart.dev/3d/goat-game-en/</link>
+      <pubDate>Thu, 14 Dec 2023 13:41:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/goat-game-en/</guid>
+      <description>The Goat Heist game was my coursework for the module &amp;lsquo;Advanced Game Technologies&amp;rsquo;, where we were tasked with creating a simple game in C++. We were given a codebase which handled the graphics portion of the game, but needed to add a physics system, some physics related game mechanics, state based AI and pathfinding.
+The required features for the coursework included:
+Create a game in which the player must attempt to steal a guarded item from a building inside a voxelised world.</description>
+    </item>
+    <item>
+      <title>Voxel Rendering and World Generation System</title>
+      <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
+      <pubDate>Sun, 07 May 2023 11:19:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/voxel-world-diss-en/</guid>
+      <description>My undergraduate dissertation project was to create and optimise a voxel based rendering and world generation system. Inspiration for this project was clearly drawn from Minecraft, one of the most popular games of all time, but also from games such as Astroneer - which uses a voxel system at the core of its player destructible world.
+I used Unity for this project, and created a voxel rendering system which was able to generate a set of triangular meshes, with the correct textures applied, to represent an inputted three dimensional array of blocks, which had been generated using smooth noise functions.</description>
+    </item>
+  </channel>
+</rss>

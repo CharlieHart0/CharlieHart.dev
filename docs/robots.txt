@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://charliehart.dev/sitemap.xml

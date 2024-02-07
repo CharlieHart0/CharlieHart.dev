@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PC on charliehart.dev</title>
+    <link>https://charliehart.dev/tags/pc/</link>
+    <description>Recent content in PC on charliehart.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 14 Dec 2023 13:41:00 +0000</lastBuildDate>
+    <atom:link href="https://charliehart.dev/tags/pc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Goat Heist</title>
+      <link>https://charliehart.dev/3d/goat-game-en/</link>
+      <pubDate>Thu, 14 Dec 2023 13:41:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/goat-game-en/</guid>
+      <description>The Goat Heist game was my coursework for the module &amp;lsquo;Advanced Game Technologies&amp;rsquo;, where we were tasked with creating a simple game in C++. We were given a codebase which handled the graphics portion of the game, but needed to add a physics system, some physics related game mechanics, state based AI and pathfinding.
+The required features for the coursework included:
+Create a game in which the player must attempt to steal a guarded item from a building inside a voxelised world.</description>
+    </item>
+    <item>
+      <title>Trijam #226 - Paid in Blood</title>
+      <link>https://charliehart.dev/2d/trijam-paid-in-blood-en/</link>
+      <pubDate>Sun, 02 Jul 2023 14:15:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/trijam-paid-in-blood-en/</guid>
+      <description>&amp;lsquo;Paid in Blood&amp;rsquo; was my entry to Trijam #226, a game jam with the twist of being given only three hours to create your game! This does not include planning, compiling or uploading your game, only time spent actively creating the game.
+The theme for the jam was &amp;lsquo;You gain a little, you lose a little&amp;rsquo;. The idea I settled on for the game was a small roguelite, where the players health is used as a currency to unlock upgrades.</description>
+    </item>
+    <item>
+      <title>Voxel Rendering and World Generation System</title>
+      <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
+      <pubDate>Sun, 07 May 2023 11:19:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/voxel-world-diss-en/</guid>
+      <description>My undergraduate dissertation project was to create and optimise a voxel based rendering and world generation system. Inspiration for this project was clearly drawn from Minecraft, one of the most popular games of all time, but also from games such as Astroneer - which uses a voxel system at the core of its player destructible world.
+I used Unity for this project, and created a voxel rendering system which was able to generate a set of triangular meshes, with the correct textures applied, to represent an inputted three dimensional array of blocks, which had been generated using smooth noise functions.</description>
+    </item>
+    <item>
+      <title>Mini Jam 117- Double-Barrelled Doppelgänger</title>
+      <link>https://charliehart.dev/2d/doppelganger-en/</link>
+      <pubDate>Sun, 16 Oct 2022 14:12:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/doppelganger-en/</guid>
+      <description>Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &amp;lsquo;Ghosts&amp;rsquo;, as the jam took place in October 2022, near halloween.
+The additional limitation for the jam&amp;rsquo;s entries was &amp;lsquo;Shotgun as a Mechanic&amp;rsquo;, and so DBD features a noisemaker toy shotgun as one of it&amp;rsquo;s core mechanics.
+Play Game Double-Barreled Doppelgänger on Itch.io
+Required Device: Windows PC</description>
+    </item>
+  </channel>
+</rss>
