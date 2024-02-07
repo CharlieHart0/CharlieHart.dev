@@ -18,15 +18,6 @@ Disclaimers I do not support pirating games, this project was focused on explori
 I do not claim responsibility for any consequences if you attempt this with your own device, you do so at your own risk and may void the manufacturer&amp;rsquo;s warranty!</description>
     </item>
     <item>
-      <title>Goat Heist</title>
-      <link>https://charliehart.dev/3d/goat-game-en/</link>
-      <pubDate>Thu, 14 Dec 2023 13:41:00 +0000</pubDate>
-      <guid>https://charliehart.dev/3d/goat-game-en/</guid>
-      <description>The Goat Heist game was my coursework for the module &amp;lsquo;Advanced Game Technologies&amp;rsquo;, where we were tasked with creating a simple game in C++. We were given a codebase which handled the graphics portion of the game, but needed to add a physics system, some physics related game mechanics, state based AI and pathfinding.
-The required features for the coursework included:
-Create a game in which the player must attempt to steal a guarded item from a building inside a voxelised world.</description>
-    </item>
-    <item>
       <title>Trijam #226 - Paid in Blood</title>
       <link>https://charliehart.dev/2d/trijam-paid-in-blood-en/</link>
       <pubDate>Sun, 02 Jul 2023 14:15:00 +0000</pubDate>
