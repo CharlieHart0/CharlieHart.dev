@@ -21,6 +21,16 @@ languageName = ":gb:"
 weight = 1
 
 [[languages.en.menu.main]]
+name = "About"
+url = "about/"
+weight = 3
+
+[[languages.en.menu.main]]
+name = "Contact"
+url = "contact/"
+weight = 3
+
+[[languages.en.menu.main]]
 name = "2D Projects"
 url = "2d/"
 weight = 4
@@ -54,6 +64,16 @@ weight = 10
 languageName = ":de:"
 weight = 2
 title = "charliehart.dev DE"
+
+[[languages.de.menu.main]]
+name = "About"
+url = "about/"
+weight = 3
+
+[[languages.de.menu.main]]
+name = "Kontakt"
+url = "contact/"
+weight = 3
 
 [[languages.de.menu.main]]
 name = "2D-Projekte"
