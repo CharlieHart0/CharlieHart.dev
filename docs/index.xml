@@ -9,6 +9,22 @@
     <lastBuildDate>Sat, 03 Feb 2024 16:23:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About me</title>
+      <link>https://charliehart.dev/about/</link>
+      <pubDate>Thu, 08 Feb 2024 11:12:00 +0000</pubDate>
+      <guid>https://charliehart.dev/about/</guid>
+      <description>Hi! I&amp;rsquo;m Charlie, a game developer and student currently in my fourth year at Newcastle University in the UK, where I am studying Computer Science (Games Engineering) at master&amp;rsquo;s level.
+Since 2018, I have been developing games both in my spare time and as part of my University course, ranging from small experiments and gamejam projects to larger projects, such as my undergraduate dissertation project.
+I have experience in both Unity and Unreal Engine, both in C# and C++, and several of my projects have been created without the use of an engine, in C++.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>https://charliehart.dev/contact/</link>
+      <pubDate>Thu, 08 Feb 2024 11:12:00 +0000</pubDate>
+      <guid>https://charliehart.dev/contact/</guid>
+      <description>You can contact me at charlie@charliehart.dev</description>
+    </item>
+    <item>
       <title>Modding the PS Vita</title>
       <link>https://charliehart.dev/misc/vita-hacking-en/</link>
       <pubDate>Sat, 03 Feb 2024 16:23:00 +0000</pubDate>
