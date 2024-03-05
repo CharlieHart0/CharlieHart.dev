@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Creating a Gameboy Emulator - Ongoing | charliehart.dev</title>
+<meta name="keywords" content="Ongoing, Gameboy, Misc, Emulation, C&#43;&#43;">
+<meta name="description" content="My first emulator project is to write a Gameboy emulator, in C&#43;&#43;, and is a project with several stages, so this post will be updated over time as new sections are added.
+At the time of writing, I have implemented the Gameboy&rsquo;s CPU, memory bus and instruction set.
+Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
+(The project is ongoing, and cannot yet be used as a full emulator)
+CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.">
+<meta name="author" content="Charlie Hart">
+<link rel="canonical" href="https://charliehart.dev/misc/gameboy-emulator-en/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://charliehart.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://charliehart.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://charliehart.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://charliehart.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://charliehart.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://charliehart.dev/misc/gameboy-emulator-en/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Creating a Gameboy Emulator - Ongoing" />
+<meta property="og:description" content="My first emulator project is to write a Gameboy emulator, in C&#43;&#43;, and is a project with several stages, so this post will be updated over time as new sections are added.
+At the time of writing, I have implemented the Gameboy&rsquo;s CPU, memory bus and instruction set.
+Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
+(The project is ongoing, and cannot yet be used as a full emulator)
+CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://charliehart.dev/misc/gameboy-emulator-en/" /><meta property="article:section" content="Misc" />
+<meta property="article:published_time" content="2024-03-03T16:23:00+00:00" />
+<meta property="article:modified_time" content="2024-03-03T16:23:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating a Gameboy Emulator - Ongoing"/>
+<meta name="twitter:description" content="My first emulator project is to write a Gameboy emulator, in C&#43;&#43;, and is a project with several stages, so this post will be updated over time as new sections are added.
+At the time of writing, I have implemented the Gameboy&rsquo;s CPU, memory bus and instruction set.
+Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
+(The project is ongoing, and cannot yet be used as a full emulator)
+CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Misc Projects",
+      "item": "https://charliehart.dev/misc/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Creating a Gameboy Emulator - Ongoing",
+      "item": "https://charliehart.dev/misc/gameboy-emulator-en/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Creating a Gameboy Emulator - Ongoing",
+  "name": "Creating a Gameboy Emulator - Ongoing",
+  "description": "My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.\nAt the time of writing, I have implemented the Gameboy\u0026rsquo;s CPU, memory bus and instruction set.\nGithub Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator\n(The project is ongoing, and cannot yet be used as a full emulator)\nCPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.",
+  "keywords": [
+    "Ongoing", "Gameboy", "Misc", "Emulation", "C++"
+  ],
+  "articleBody": "My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.\nAt the time of writing, I have implemented the Gameboy’s CPU, memory bus and instruction set.\nGithub Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator\n(The project is ongoing, and cannot yet be used as a full emulator)\nCPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.\nThe register F is used as the flag register, and the higher half of this register is used for the carry, half carry, subtraction and zero flag bits respectively, which are used to indicate the result of operations.\nThe register pairs AF, BC, DE and HL can also be used to store a single 16 bit value, instead of two 8 bit values, and the register pair HL is often used to store 16 bit memory addresses.\nAlso in the CPU model are the program counter and stack pointer, each of which are 16 bit memory addresses. The program counter points to the location of the next instruction bit to be excecuted, while the stack pointer points to the top of the stack - the stack in the Gameboy starts at the end of memory and works its way backwards as it grows.\nInstructions In order to emulate the Gameboy’s CPU, I had to implement the instruction set, which has about 500 different combinations of instruction and operands. A table of opcodes can be found here\nA table of the 8-bit opcodes.\nIf the byte 0xCB is used as an instruction byte, then a second table of 255 opcodes is used, where the byte following 0xCB is used. These are referred to as the 16-bit prefixed opcodes, and are mostly bit operations, to make a total of around 500 instructions.\nThe instructions include the following, and many others:\nAddition and subtraction\nBitwise AND, OR, XOR and comparison operations\nMoving values between registers\nPushing and Popping the values of 16 bit register pairs to the stack\nControl flow operations such as Jumping based on the value of flags in the flag register\nBit rotations, setting and resetting of bits, and bit swapping.\nMemory Map The Game Boy’s memory is treated as a single long array of 65,535 8 bit values, but only a small section of this is the actual working RAM of the device, and most of this ‘memory’ is instead mapped to many things including but not limited to:\nThe Boot ROM 0x0000 - 0x00FF: ROM which sets up the Game Boy’s hardware in order to run a game. The Boot ROM is unloaded when a game starts.\nGame ROM banks 0x0000 - 0x3FFF and 0x4000-0x7FFF: These areas of memory are where data from the game cartridge can be loaded as needed during excecution of the game.\nTile RAM 0x8000 - 0x97FF: Stores tiles of graphics information which can be displayed on the screen. The GB’s tiling system does not allow direct control of individual pixels, instead tiles are used to display square groups of pixels at certain locations.\nCartridge RAM 0xA000 - 0xBFFF: Some game cartridges come with extra RAM on board, this area maps to this RAM.\nWorking RAM 0xC000 - 0xDFFF: The area of RAM that a game is allowed to use. The only area in which the memory can be freely read from and written to by a game.\nFuture Work The CPU is implemented, but cannot be tested yet until a Boot ROM can be loaded into memory.\nThe next step is to create a tile inspector, to view the GB’s tile memory, and allow the graphics portion of the emulator to be implemented. I plan to use GTK to create this GUI.\nOnce the graphics have been implemented in the emulator, I will be able to run test programs to ensure that the CPU instructions work correctly\nFollowing that, both Audio and Input are required.\n",
+  "wordCount" : "677",
+  "inLanguage": "en",
+  "datePublished": "2024-03-03T16:23:00Z",
+  "dateModified": "2024-03-03T16:23:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Charlie Hart"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://charliehart.dev/misc/gameboy-emulator-en/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "charliehart.dev",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://charliehart.dev/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://charliehart.dev/" accesskey="h" title="charliehart.dev (Alt + H)">charliehart.dev</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://charliehart.dev/de/" title="German"
+                            aria-label=":de:">🇩🇪</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://charliehart.dev/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/2d/" title="2D Projects">
+                    <span>2D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/3d/" title="3D Projects">
+                    <span>3D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/misc/" title="Misc Projects">
+                    <span>Misc Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://charliehart.dev/">Home</a>&nbsp;»&nbsp;<a href="https://charliehart.dev/misc/">Misc Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Creating a Gameboy Emulator - Ongoing
+    </h1>
+    <div class="post-meta"><span title='2024-03-03 16:23:00 +0000 UTC'>March 3, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Charlie Hart
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#github-repository" aria-label="Github Repository">Github Repository</a></li>
+                <li>
+                    <a href="#cpu" aria-label="CPU">CPU</a><ul>
+                        
+                <li>
+                    <a href="#instructions" aria-label="Instructions">Instructions</a></li></ul>
+                </li>
+                <li>
+                    <a href="#memory-map" aria-label="Memory Map">Memory Map</a></li>
+                <li>
+                    <a href="#future-work" aria-label="Future Work">Future Work</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.</p>
+<p>At the time of writing, I have implemented the Gameboy&rsquo;s CPU, memory bus and instruction set.</p>
+<h2 id="github-repository">Github Repository<a hidden class="anchor" aria-hidden="true" href="#github-repository">#</a></h2>
+<p><a href="https://github.com/CharlieHart0/GameBoyEmu">GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator</a></p>
+<p>(The project is ongoing, and cannot yet be used as a full emulator)</p>
+<h2 id="cpu">CPU<a hidden class="anchor" aria-hidden="true" href="#cpu">#</a></h2>
+<p>The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.</p>
+<p>The register F is used as the flag register, and the higher half of this register is used for the carry, half carry, subtraction and zero flag bits respectively, which are used to indicate the result of operations.</p>
+<p>The register pairs AF, BC, DE and HL can also be used to store a single 16 bit value, instead of two 8 bit values, and the register pair HL is often used to store 16 bit memory addresses.</p>
+<p>Also in the CPU model are the program counter and stack pointer, each of which are 16 bit memory addresses. The program counter points to the location of the next instruction bit to be excecuted, while the stack pointer points to the top of the stack - the stack in the Gameboy starts at the end of memory and works its way backwards as it grows.</p>
+<h3 id="instructions">Instructions<a hidden class="anchor" aria-hidden="true" href="#instructions">#</a></h3>
+<p>In order to emulate the Gameboy&rsquo;s CPU, I had to implement the instruction set, which has about 500 different combinations of instruction and operands. A table of opcodes can be found <a href="https://meganesu.github.io/generate-gb-opcodes/">here</a></p>
+<img title="" src="https://imgur.com/oq7Mooa" alt="">
+<p>A table of the 8-bit opcodes.</p>
+<p>If the byte 0xCB is used as an instruction byte, then a second table of 255 opcodes is used, where the byte following 0xCB is used. These are referred to as the 16-bit prefixed opcodes, and are mostly bit operations, to make a total of around 500 instructions.</p>
+<p>The instructions include the following, and many others:</p>
+<ul>
+<li>
+<p>Addition and subtraction</p>
+</li>
+<li>
+<p>Bitwise AND, OR, XOR and comparison operations</p>
+</li>
+<li>
+<p>Moving values between registers</p>
+</li>
+<li>
+<p>Pushing and Popping the values of 16 bit register pairs to the stack</p>
+</li>
+<li>
+<p>Control flow operations such as Jumping based on the value of flags in the flag register</p>
+</li>
+<li>
+<p>Bit rotations, setting and resetting of bits, and bit swapping.</p>
+</li>
+</ul>
+<h2 id="memory-map">Memory Map<a hidden class="anchor" aria-hidden="true" href="#memory-map">#</a></h2>
+<p>The Game Boy&rsquo;s memory is treated as a single long array of 65,535 8 bit values, but only a small section of this is the actual working RAM of the device, and most of this &lsquo;memory&rsquo; is instead mapped to many things including but not limited to:</p>
+<ul>
+<li>
+<p>The Boot ROM 0x0000 - 0x00FF: ROM which sets up the Game Boy&rsquo;s hardware in order to run a game. The Boot ROM is unloaded when a game starts.</p>
+</li>
+<li>
+<p>Game ROM banks 0x0000 - 0x3FFF and 0x4000-0x7FFF: These areas of memory are where data from the game cartridge can be loaded as needed during excecution of the game.</p>
+</li>
+<li>
+<p>Tile RAM 0x8000 - 0x97FF: Stores tiles of graphics information which can be displayed on the screen. The GB&rsquo;s tiling system does not allow direct control of individual pixels, instead tiles are used to display square groups of pixels at certain locations.</p>
+</li>
+<li>
+<p>Cartridge RAM 0xA000 - 0xBFFF: Some game cartridges come with extra RAM on board, this area maps to this RAM.</p>
+</li>
+<li>
+<p>Working RAM 0xC000 - 0xDFFF: The area of RAM that a game is allowed to use. The only area in which the memory can be freely read from and written to by a game.</p>
+</li>
+</ul>
+<h2 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h2>
+<ul>
+<li>
+<p>The CPU is implemented, but cannot be tested yet until a Boot ROM can be loaded into memory.</p>
+</li>
+<li>
+<p>The next step is to create a tile inspector, to view the GB&rsquo;s tile memory, and allow the graphics portion of the emulator to be implemented. I plan to use GTK to create this GUI.</p>
+</li>
+<li>
+<p>Once the graphics have been implemented in the emulator, I will be able to run test programs to ensure that the CPU instructions work correctly</p>
+</li>
+<li>
+<p>Following that, both Audio and Input are required.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://charliehart.dev/tags/ongoing/">Ongoing</a></li>
+      <li><a href="https://charliehart.dev/tags/gameboy/">Gameboy</a></li>
+      <li><a href="https://charliehart.dev/tags/misc/">Misc</a></li>
+      <li><a href="https://charliehart.dev/tags/emulation/">Emulation</a></li>
+      <li><a href="https://charliehart.dev/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://charliehart.dev/misc/vita-hacking-en/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Modding the PS Vita</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://charliehart.dev/">charliehart.dev</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
