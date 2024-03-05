@@ -31,9 +31,9 @@ Also in the CPU model are the program counter and stack pointer, each of which a
 
 In order to emulate the Gameboy's CPU, I had to implement the instruction set, which has about 500 different combinations of instruction and operands. A table of opcodes can be found [here](https://meganesu.github.io/generate-gb-opcodes/)
 
-<img title="" src="https://imgur.com/oq7Mooa" alt="">
+<img title="" src="https://imgur.com/oq7Mooa.jpg" alt="">
 
-A table of the 8-bit opcodes. 
+
 
 If the byte 0xCB is used as an instruction byte, then a second table of 255 opcodes is used, where the byte following 0xCB is used. These are referred to as the 16-bit prefixed opcodes, and are mostly bit operations, to make a total of around 500 instructions.
 
