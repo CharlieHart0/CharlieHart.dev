@@ -15,7 +15,7 @@ At the time of writing, I have implemented the Gameboy's CPU, memory bus and ins
 
 [GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator](https://github.com/CharlieHart0/GameBoyEmu)
 
-(The project is ongoing, and cannot be used yet)
+(The project is ongoing, and cannot yet be used as a full emulator)
 
 ## CPU
 
@@ -51,10 +51,26 @@ The instructions include the following, and many others:
 
 - Bit rotations, setting and resetting of bits, and bit swapping.
 
+## Memory Map
 
+The Game Boy's memory is treated as a single long array of 65,535 8 bit values, but only a small section of this is the actual working RAM of the device, and most of this 'memory' is instead mapped to many things including but not limited to:
 
+- The Boot ROM 0x0000 - 0x00FF: ROM which sets up the Game Boy's hardware in order to run a game. The Boot ROM is unloaded when a game starts.
 
+- Game ROM banks 0x0000 - 0x3FFF and 0x4000-0x7FFF: These areas of memory are where data from the game cartridge can be loaded as needed during excecution of the game.
 
-## Memory Bus
+- Tile RAM 0x8000 - 0x97FF: Stores tiles of graphics information which can be displayed on the screen. The GB's tiling system does not allow direct control of individual pixels, instead tiles are used to display square groups of pixels at certain locations.
+
+- Cartridge RAM 0xA000 - 0xBFFF: Some game cartridges come with extra RAM on board, this area maps to this RAM.
+
+- Working RAM 0xC000 - 0xDFFF: The area of RAM that a game is allowed to use. The only area in which the memory can be freely read from and written to by a game.
 
 ## Future Work
+
+- The CPU is implemented, but cannot be tested yet until a Boot ROM can be loaded into memory.
+
+- The next step is to create a tile inspector, to view the GB's tile memory, and allow the graphics portion of the emulator to be implemented. I plan to use GTK to create this GUI.
+
+- Once the graphics have been implemented in the emulator, I will be able to run test programs to ensure that the CPU instructions work correctly
+
+- Following that, both Audio and Input are required.
