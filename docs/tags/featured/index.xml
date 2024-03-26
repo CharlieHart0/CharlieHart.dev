@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Featured on charliehart.dev</title>
+    <title>Featured Projects on charliehart.dev</title>
     <link>https://charliehart.dev/tags/featured/</link>
-    <description>Recent content in Featured on charliehart.dev</description>
+    <description>Recent content in Featured Projects on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 19 Mar 2024 13:41:00 +0000</lastBuildDate>
@@ -28,7 +28,7 @@ Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
 CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.</description>
     </item>
     <item>
-      <title>Goat Heist</title>
+      <title>Goat Heist - 3D Postgraduate Game</title>
       <link>https://charliehart.dev/3d/goat-game-en/</link>
       <pubDate>Thu, 14 Dec 2023 13:41:00 +0000</pubDate>
       <guid>https://charliehart.dev/3d/goat-game-en/</guid>
@@ -37,7 +37,7 @@ The required features for the coursework included:
 Create a game in which the player must attempt to steal a guarded item from a building inside a voxelised world.</description>
     </item>
     <item>
-      <title>Voxel Rendering and World Generation System</title>
+      <title>Voxel Rendering and World Generation System - C#</title>
       <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
       <pubDate>Sun, 07 May 2023 11:19:00 +0000</pubDate>
       <guid>https://charliehart.dev/3d/voxel-world-diss-en/</guid>
