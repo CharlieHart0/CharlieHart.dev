@@ -11,7 +11,7 @@ This project is a 3D platformer game, in which the player has to reach the end o
 
 Our project was created using our own engine in C++, and was based on [the 'Goat Heist' game](https://charliehart.dev/3d/goat-game-en/) I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.
 
-## Youtube Video
+## Video
 
 ## Team Organisation and Communication
 
@@ -55,7 +55,7 @@ Trigger Volumes are another feature I added to the codebase. Trigger Volumes are
 
 As creating a Trigger Volume is as simple as setting the `m_isTrigger` flag on an object to true, a Trigger Volume can be made of any physics object with any existing collider shape already implemented.
 
-#### Usage
+#### Usages
 
 ##### Checkpoints and Respawn Triggers
 
@@ -69,18 +69,96 @@ This allowed us to set exactly where we deemed 'Out of Bounds' for the player, a
 
 'Player Detection Boxes' are a type of Trigger Volume that tracks the player objects currently inside the volume, in a `std::set<PlayerCharacter*>`. These are used by the rhino enemies, to determine the closest player to them, within their patrolled area.
 
+```cpp
+// PlayerDetectorBox.h
+class PlayerDetectorBox :
+	public TriggerBox
+{
+public:
+    
+	void onCollisionBegin(GameObject* t_otherObject) {
+		if (t_otherObject->GetType() == ObjectType::Player) {
+			m_playersDetected.insert((PlayerCharacter*)t_otherObject);
+		}
+	}
+
+	void onCollisionEnd(GameObject* t_otherObject) {
+		if (t_otherObject->GetType() == ObjectType::Player) {
+			m_playersDetected.erase((PlayerCharacter*)t_otherObject);
+		}
+	}
+
+	std::set<PlayerCharacter*>* getPlayers() { return &m_playersDetected; }
+
+protected:
+	std::set<PlayerCharacter*> m_playersDetected;
+};
+```
+
 *Note that the game did not end up having multiplayer functionality, but at the time this feature was added, multiplayer was still a planned feature.*
 
 ### Rhino Enemy
 
-### Map editor/importer
+The rhino enemies in the game are state machine controlled, and use the following logic:
+
+- `Idle state` - remain still until a player enters the rhino's player detection volume, then enter `Targeting state`.
+
+- `Targeting state` - smoothly orients itself towards the nearest player inside the detection volume, and enters `Attacking state` a set time after entering the `Targeting state`.
+
+- `Attacking state` - force is applied in the direction the rhino is pointing, to make it charge in the targeted direction. The rhino does not change its targeted direction after entering this state, so it charges in a straight line. If the rhino leaves it's player detection volume, for example by charging out of it, the rhino will smoothly return to the volume and revert to the `Idle state`.
+
+### Map editor/importer tool
+
+In order to design levels for the game, a graphical map editor was required. Hard-coding the positions, sizes and orientations of each element in a level would take far too long, and is not an intuitive way to work.
+
+I designed a Map Exporter tool for the Unity engine, in C#, which would convert a scene designed in Unity's graphical editor, into a `.json` file, containing information such as :
+
+- Object positions, sizesand  orientations
+
+- Object Types (Geometry, Player, Rhino, Checkpoint etc)
+
+- Render Meshes
+
+- Collider types
+
+- Physics Object inverse masses
+
+and much more information, where applicable to a given object.
+
+I then wrote a corresponding tool in C++, making use of [The Rapidjson Library](https://rapidjson.org/), to read a map file in `.json` format, and spawn the objects in the game world. 
+
+It can also load a map file in at a given offset position, so it is possible to add a stage to the game inbetween existing stages, only the offset position would need to be changed, on the line calling the `loadMapFromJSON()` function.
+
+```cpp
+// MapImporter.h (Snippet)
+...
+static void loadMapFromJSON(std::string t_fileName, GameWorld& t_world,
+    Vector3 t_offset = Vector3(0, 0, 0));
+...
+```
+
+This tool allowed us to spend less time on level design - something not being assessed in this coursework - and more time on implementing other features into our game and engine.
+
+### Debug UI
+
+Another team member created a Debug UI in the game using ImGUI, which can be accessed by pressing the `I` key. I added several parts to this UI, such as:
+
+- Frame rate in fps, and Frame time in ms
+
+- Physics tick time in ms
+
+- Render tick time in ms
+
+- A representation of the world axes in the viewport
 
 ## Future Work
 
-- Scene nodes and children parent objects
+- An object tree, where an object can have several child objects that move as the parent moves, would be useful to enable more complex gameplay.
 
-- Physics objects which are static, make physics calculations simpler, currently they are ridigbodies with full constraints applied.
+- The physics system could be optimised, by not checking for collisions between objects pairs, when both are fully constrained.
 
-- OBBs are not working correctly
+- It would be convenient to be able to load a map from a file in any orientation. Currently, it can only be loaded in the orientation it was designed in.
+
+- Implementation of networking and multiplayer to the game. This would require a redesign of several existing features, and may take some time.
 
 ### 
