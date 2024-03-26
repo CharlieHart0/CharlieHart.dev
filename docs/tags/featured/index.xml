@@ -16,5 +16,33 @@
       <description>This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &amp;lsquo;Mini-Studio&amp;rsquo; at Newcastle University.
 Our project was created using our own engine in C++, and was based on the &amp;lsquo;Goat Heist&amp;rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.</description>
     </item>
+    <item>
+      <title>Creating a Gameboy Emulator - Ongoing</title>
+      <link>https://charliehart.dev/misc/gameboy-emulator-en/</link>
+      <pubDate>Sun, 03 Mar 2024 16:23:00 +0000</pubDate>
+      <guid>https://charliehart.dev/misc/gameboy-emulator-en/</guid>
+      <description>My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.
+At the time of writing, I have implemented the Gameboy&amp;rsquo;s CPU, memory bus and instruction set.
+Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
+(The project is ongoing, and cannot yet be used as a full emulator)
+CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.</description>
+    </item>
+    <item>
+      <title>Goat Heist</title>
+      <link>https://charliehart.dev/3d/goat-game-en/</link>
+      <pubDate>Thu, 14 Dec 2023 13:41:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/goat-game-en/</guid>
+      <description>The Goat Heist game was my coursework for the module &amp;lsquo;Advanced Game Technologies&amp;rsquo;, where we were tasked with creating a simple game in C++. We were given a codebase which handled the graphics portion of the game, but needed to add a physics system, some physics related game mechanics, state based AI and pathfinding.
+The required features for the coursework included:
+Create a game in which the player must attempt to steal a guarded item from a building inside a voxelised world.</description>
+    </item>
+    <item>
+      <title>Voxel Rendering and World Generation System</title>
+      <link>https://charliehart.dev/3d/voxel-world-diss-en/</link>
+      <pubDate>Sun, 07 May 2023 11:19:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/voxel-world-diss-en/</guid>
+      <description>My undergraduate dissertation project was to create and optimise a voxel based rendering and world generation system. Inspiration for this project was clearly drawn from Minecraft, one of the most popular games of all time, but also from games such as Astroneer - which uses a voxel system at the core of its player destructible world.
+I used Unity for this project, and created a voxel rendering system which was able to generate a set of triangular meshes, with the correct textures applied, to represent an inputted three dimensional array of blocks, which had been generated using smooth noise functions.</description>
+    </item>
   </channel>
 </rss>
