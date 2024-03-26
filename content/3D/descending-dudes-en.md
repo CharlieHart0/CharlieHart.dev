@@ -2,7 +2,7 @@
 title = 'Descending Dudes - Postgraduate 3D Team Project'
 date = 2024-19-03T13:41:00Z
 publishDate =  2024-19-03T13:41:00Z
-draft = true
+draft = false
 tags = ['3D','cpp','PC','University','Physics','AI','Team Project','Featured']
 ShowToc = true
 +++
@@ -12,6 +12,18 @@ This project is a 3D platformer game, in which the player has to reach the end o
 Our project was created using our own engine in C++, and was based on [the 'Goat Heist' game](https://charliehart.dev/3d/goat-game-en/) I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.
 
 ## Video
+
+{{< youtube 25KI7QYORl8 >}}
+
+## Screenshots
+
+Level 1 - Gate Gallop
+
+<img title="" src="https://i.imgur.com/YyG7VYY.png" alt="">
+
+Level 3 - Obstacle Course
+
+<img title="" src="https://i.imgur.com/ZKbJJzd.png" alt="">
 
 ## Team Organisation and Communication
 
@@ -72,26 +84,26 @@ This allowed us to set exactly where we deemed 'Out of Bounds' for the player, a
 ```cpp
 // PlayerDetectorBox.h
 class PlayerDetectorBox :
-	public TriggerBox
+    public TriggerBox
 {
 public:
-    
-	void onCollisionBegin(GameObject* t_otherObject) {
-		if (t_otherObject->GetType() == ObjectType::Player) {
-			m_playersDetected.insert((PlayerCharacter*)t_otherObject);
-		}
-	}
 
-	void onCollisionEnd(GameObject* t_otherObject) {
-		if (t_otherObject->GetType() == ObjectType::Player) {
-			m_playersDetected.erase((PlayerCharacter*)t_otherObject);
-		}
-	}
+    void onCollisionBegin(GameObject* t_otherObject) {
+        if (t_otherObject->GetType() == ObjectType::Player) {
+            m_playersDetected.insert((PlayerCharacter*)t_otherObject);
+        }
+    }
 
-	std::set<PlayerCharacter*>* getPlayers() { return &m_playersDetected; }
+    void onCollisionEnd(GameObject* t_otherObject) {
+        if (t_otherObject->GetType() == ObjectType::Player) {
+            m_playersDetected.erase((PlayerCharacter*)t_otherObject);
+        }
+    }
+
+    std::set<PlayerCharacter*>* getPlayers() { return &m_playersDetected; }
 
 protected:
-	std::set<PlayerCharacter*> m_playersDetected;
+    std::set<PlayerCharacter*> m_playersDetected;
 };
 ```
 
@@ -125,6 +137,10 @@ I designed a Map Exporter tool for the Unity engine, in C#, which would convert 
 
 and much more information, where applicable to a given object.
 
+The graphical map editor in Unity, showing level 4 of the game:
+
+<img title="" src="https://i.imgur.com/oU4ZAge.png" alt="">
+
 I then wrote a corresponding tool in C++, making use of [The Rapidjson Library](https://rapidjson.org/), to read a map file in `.json` format, and spawn the objects in the game world. 
 
 It can also load a map file in at a given offset position, so it is possible to add a stage to the game inbetween existing stages, only the offset position would need to be changed, on the line calling the `loadMapFromJSON()` function.
@@ -139,9 +155,11 @@ static void loadMapFromJSON(std::string t_fileName, GameWorld& t_world,
 
 This tool allowed us to spend less time on level design - something not being assessed in this coursework - and more time on implementing other features into our game and engine.
 
-### Debug UI
+### Debug UI Elements
 
-Another team member created a Debug UI in the game using ImGUI, which can be accessed by pressing the `I` key. I added several parts to this UI, such as:
+Another team member created a Debug UI in the game using ImGUI, which can be accessed by pressing the `I` key.
+
+I added several elements to this UI, displaying information such as:
 
 - Frame rate in fps, and Frame time in ms
 
@@ -150,6 +168,8 @@ Another team member created a Debug UI in the game using ImGUI, which can be acc
 - Render tick time in ms
 
 - A representation of the world axes in the viewport
+  
+  <img title="" src="https://i.imgur.com/Kw0F82n.png" alt="">
 
 ## Future Work
 
