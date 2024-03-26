@@ -3,7 +3,7 @@ title = 'Creating a Gameboy Emulator - Ongoing'
 date = 2024-03-03T16:23:00Z
 publishDate = 2024-03-03T16:23:00Z
 draft = false
-tags = ['Ongoing','Gameboy','Misc','Emulation','C++']
+tags = ['Ongoing','Gameboy','Misc','Emulation','C++', 'Featured']
 ShowToc = true
 +++
 
@@ -34,8 +34,6 @@ In order to emulate the Gameboy's CPU, I had to implement the instruction set, w
 <img title="" src="https://imgur.com/oq7Mooa.jpg" alt="">
 
 A table of all 8 bit opcodes.
-
-
 
 If the byte 0xCB is used as an instruction byte, then a second table of 255 opcodes is used, where the byte following 0xCB is used. These are referred to as the 16-bit prefixed opcodes, and are mostly bit operations, to make a total of around 500 instructions.
 
