@@ -1,7 +1,7 @@
 +++
 title = 'Descending Dudes - Postgraduate 3D Team Project'
-date = 2024-19-03T13:41:00Z
-publishDate =  2024-19-03T13:41:00Z
+date = 2024-03-19T13:41:00Z
+publishDate =  2024-03-19T13:41:00Z
 draft = false
 tags = ['3D','cpp','PC','University','Physics','AI','Team Project','Featured']
 ShowToc = true
