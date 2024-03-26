@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featured on charliehart.dev</title>
+    <link>https://charliehart.dev/tags/featured/</link>
+    <description>Recent content in Featured on charliehart.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Mar 2024 13:41:00 +0000</lastBuildDate>
+    <atom:link href="https://charliehart.dev/tags/featured/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Descending Dudes - Postgraduate 3D Team Project</title>
+      <link>https://charliehart.dev/3d/descending-dudes-en/</link>
+      <pubDate>Tue, 19 Mar 2024 13:41:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/descending-dudes-en/</guid>
+      <description>This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &amp;lsquo;Mini-Studio&amp;rsquo; at Newcastle University.
+Our project was created using our own engine in C++, and was based on the &amp;lsquo;Goat Heist&amp;rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.</description>
+    </item>
+  </channel>
+</rss>

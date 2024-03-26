@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game Jam on charliehart.dev</title>
+    <link>https://charliehart.dev/tags/game-jam/</link>
+    <description>Recent content in Game Jam on charliehart.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Jul 2023 14:15:00 +0000</lastBuildDate>
+    <atom:link href="https://charliehart.dev/tags/game-jam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trijam #226 - Paid in Blood</title>
+      <link>https://charliehart.dev/2d/trijam-paid-in-blood-en/</link>
+      <pubDate>Sun, 02 Jul 2023 14:15:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/trijam-paid-in-blood-en/</guid>
+      <description>&amp;lsquo;Paid in Blood&amp;rsquo; was my entry to Trijam #226, a game jam with the twist of being given only three hours to create your game! This does not include planning, compiling or uploading your game, only time spent actively creating the game.
+The theme for the jam was &amp;lsquo;You gain a little, you lose a little&amp;rsquo;. The idea I settled on for the game was a small roguelite, where the players health is used as a currency to unlock upgrades.</description>
+    </item>
+    <item>
+      <title>Mini Jam 117- Double-Barrelled Doppelgänger</title>
+      <link>https://charliehart.dev/2d/doppelganger-en/</link>
+      <pubDate>Sun, 16 Oct 2022 14:12:00 +0000</pubDate>
+      <guid>https://charliehart.dev/2d/doppelganger-en/</guid>
+      <description>Double-Barrelled Doppelgänger (DBD) was my entry to Mini Jam 117, a 72 hour gamejam that occurs every two weeks on Itch.io. The theme was &amp;lsquo;Ghosts&amp;rsquo;, as the jam took place in October 2022, near halloween.
+The additional limitation for the jam&amp;rsquo;s entries was &amp;lsquo;Shotgun as a Mechanic&amp;rsquo;, and so DBD features a noisemaker toy shotgun as one of it&amp;rsquo;s core mechanics.
+Play Game Double-Barreled Doppelgänger on Itch.io
+Required Device: Windows PC</description>
+    </item>
+  </channel>
+</rss>

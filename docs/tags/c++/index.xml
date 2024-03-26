@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on charliehart.dev</title>
+    <link>https://charliehart.dev/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on charliehart.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Mar 2024 16:23:00 +0000</lastBuildDate>
+    <atom:link href="https://charliehart.dev/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Gameboy Emulator - Ongoing</title>
+      <link>https://charliehart.dev/misc/gameboy-emulator-en/</link>
+      <pubDate>Sun, 03 Mar 2024 16:23:00 +0000</pubDate>
+      <guid>https://charliehart.dev/misc/gameboy-emulator-en/</guid>
+      <description>My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.
+At the time of writing, I have implemented the Gameboy&amp;rsquo;s CPU, memory bus and instruction set.
+Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
+(The project is ongoing, and cannot yet be used as a full emulator)
+CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.</description>
+    </item>
+  </channel>
+</rss>

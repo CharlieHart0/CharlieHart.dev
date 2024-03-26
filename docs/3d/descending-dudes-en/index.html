@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Descending Dudes - Postgraduate 3D Team Project | charliehart.dev</title>
+<meta name="keywords" content="3D, cpp, PC, University, Physics, AI, Team Project, Featured">
+<meta name="description" content="This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &lsquo;Mini-Studio&rsquo; at Newcastle University.
+Our project was created using our own engine in C&#43;&#43;, and was based on the &lsquo;Goat Heist&rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.">
+<meta name="author" content="Charlie Hart">
+<link rel="canonical" href="https://charliehart.dev/3d/descending-dudes-en/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://charliehart.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://charliehart.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://charliehart.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://charliehart.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://charliehart.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://charliehart.dev/3d/descending-dudes-en/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Descending Dudes - Postgraduate 3D Team Project" />
+<meta property="og:description" content="This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &lsquo;Mini-Studio&rsquo; at Newcastle University.
+Our project was created using our own engine in C&#43;&#43;, and was based on the &lsquo;Goat Heist&rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://charliehart.dev/3d/descending-dudes-en/" /><meta property="article:section" content="3D" />
+<meta property="article:published_time" content="2024-03-19T13:41:00+00:00" />
+<meta property="article:modified_time" content="2024-03-19T13:41:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Descending Dudes - Postgraduate 3D Team Project"/>
+<meta name="twitter:description" content="This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &lsquo;Mini-Studio&rsquo; at Newcastle University.
+Our project was created using our own engine in C&#43;&#43;, and was based on the &lsquo;Goat Heist&rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "3D Projects",
+      "item": "https://charliehart.dev/3d/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Descending Dudes - Postgraduate 3D Team Project",
+      "item": "https://charliehart.dev/3d/descending-dudes-en/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Descending Dudes - Postgraduate 3D Team Project",
+  "name": "Descending Dudes - Postgraduate 3D Team Project",
+  "description": "This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a \u0026lsquo;Mini-Studio\u0026rsquo; at Newcastle University.\nOur project was created using our own engine in C++, and was based on the \u0026lsquo;Goat Heist\u0026rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.",
+  "keywords": [
+    "3D", "cpp", "PC", "University", "Physics", "AI", "Team Project", "Featured"
+  ],
+  "articleBody": "This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a ‘Mini-Studio’ at Newcastle University.\nOur project was created using our own engine in C++, and was based on the ‘Goat Heist’ game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.\nVideo Screenshots Level 1 - Gate Gallop\nLevel 3 - Obstacle Course\nTeam Organisation and Communication Throughout the project, we used many tools to assist in communication and organisation:\nGit, for Version Control and developing several features in parallel, making use of branches.\nJenkins, for automated building of our project and reporting of issues when a push was made to Git.\nMicrosoft Teams, for team communication, and the Teams add-on “Tasks by Planner”, for creating kanban boards to track tasks.\nMini Code Reviews In order for a new feature to be merged into the main branch of our repository, we performed ‘Mini Code Reviews’, where the member merging the branch would sit down with another member of the team and read through their code, explaining what it does, and ensuring it was ready to be merged.\nI also performed these reviews several times upon the request of other team members, when they required assistance to debug their code, and this really sped up the time it took to fix bugs in our program, maximising the time available to work on other features.\nDevelopment In this section, I’ll cover the areas of the game’s codebase I worked on.\nAxial Constraints I added optional axial constraints to physics objects in the engine, per axis, for both linear motion and angular motion.\nFor example, an object with constrained linear motion on the X,Y and Z axis cannot move linearly (change position) as a result of physics calculations, but can rotate.\nThe constraint state of a physics object is stored as an eight bit value, where the lowest 6 bits represent a true or false constraint in each of the 3 axis of linear and angular motion.\nBefore calculating the new position of an object in the physics tick, a check is performed, and if any axial constraints are applied to the object, the relevant linear or angular velocity component is set to zero.\nUsage Axial Constraints were used for both the player and enemies, to ensure that they were unable to rotate on any axis other than Y, therefore constraints on the X and Z angular motion were applied.\nTrigger Volumes Trigger Volumes are another feature I added to the codebase. Trigger Volumes are physics objects which are not ‘solid’, that is, no collision resolution is applied to a collision involving one or more Trigger Volumes. However, they will run one or more functions when an object begins to and finishes colliding with the volume.\nAs creating a Trigger Volume is as simple as setting the m_isTrigger flag on an object to true, a Trigger Volume can be made of any physics object with any existing collider shape already implemented.\nUsages Checkpoints and Respawn Triggers Trigger Volumes were used for both Checkpoints and Respawn Triggers in this game. When a player enters a Checkpoint trigger, the player’s current position and orientation are stored.\nWhen the player enters a Respawn trigger, their position and orientation are set to these stored values, and their velocity, both linear and angular, are set to zero.\nThis allowed us to set exactly where we deemed ‘Out of Bounds’ for the player, and was a much better method than what was used previously, resetting the player’s position to a set value when the players y position was below a certain threshold.\nPlayer Detection Boxes ‘Player Detection Boxes’ are a type of Trigger Volume that tracks the player objects currently inside the volume, in a std::set. These are used by the rhino enemies, to determine the closest player to them, within their patrolled area.\n// PlayerDetectorBox.h class PlayerDetectorBox : public TriggerBox { public: void onCollisionBegin(GameObject* t_otherObject) { if (t_otherObject-\u003eGetType() == ObjectType::Player) { m_playersDetected.insert((PlayerCharacter*)t_otherObject); } } void onCollisionEnd(GameObject* t_otherObject) { if (t_otherObject-\u003eGetType() == ObjectType::Player) { m_playersDetected.erase((PlayerCharacter*)t_otherObject); } } std::set\u003cPlayerCharacter*\u003e* getPlayers() { return \u0026m_playersDetected; } protected: std::set\u003cPlayerCharacter*\u003e m_playersDetected; }; Note that the game did not end up having multiplayer functionality, but at the time this feature was added, multiplayer was still a planned feature.\nRhino Enemy The rhino enemies in the game are state machine controlled, and use the following logic:\nIdle state - remain still until a player enters the rhino’s player detection volume, then enter Targeting state.\nTargeting state - smoothly orients itself towards the nearest player inside the detection volume, and enters Attacking state a set time after entering the Targeting state.\nAttacking state - force is applied in the direction the rhino is pointing, to make it charge in the targeted direction. The rhino does not change its targeted direction after entering this state, so it charges in a straight line. If the rhino leaves it’s player detection volume, for example by charging out of it, the rhino will smoothly return to the volume and revert to the Idle state.\nMap editor/importer tool In order to design levels for the game, a graphical map editor was required. Hard-coding the positions, sizes and orientations of each element in a level would take far too long, and is not an intuitive way to work.\nI designed a Map Exporter tool for the Unity engine, in C#, which would convert a scene designed in Unity’s graphical editor, into a .json file, containing information such as :\nObject positions, sizesand orientations\nObject Types (Geometry, Player, Rhino, Checkpoint etc)\nRender Meshes\nCollider types\nPhysics Object inverse masses\nand much more information, where applicable to a given object.\nThe graphical map editor in Unity, showing level 4 of the game:\nI then wrote a corresponding tool in C++, making use of The Rapidjson Library, to read a map file in .json format, and spawn the objects in the game world.\nIt can also load a map file in at a given offset position, so it is possible to add a stage to the game inbetween existing stages, only the offset position would need to be changed, on the line calling the loadMapFromJSON() function.\n// MapImporter.h (Snippet) ... static void loadMapFromJSON(std::string t_fileName, GameWorld\u0026 t_world, Vector3 t_offset = Vector3(0, 0, 0)); ... This tool allowed us to spend less time on level design - something not being assessed in this coursework - and more time on implementing other features into our game and engine.\nDebug UI Elements Another team member created a Debug UI in the game using ImGUI, which can be accessed by pressing the I key.\nI added several elements to this UI, displaying information such as:\nFrame rate in fps, and Frame time in ms\nPhysics tick time in ms\nRender tick time in ms\nA representation of the world axes in the viewport\nFuture Work An object tree, where an object can have several child objects that move as the parent moves, would be useful to enable more complex gameplay.\nThe physics system could be optimised, by not checking for collisions between objects pairs, when both are fully constrained.\nIt would be convenient to be able to load a map from a file in any orientation. Currently, it can only be loaded in the orientation it was designed in.\nImplementation of networking and multiplayer to the game. This would require a redesign of several existing features, and may take some time.\n",
+  "wordCount" : "1278",
+  "inLanguage": "en",
+  "datePublished": "2024-03-19T13:41:00Z",
+  "dateModified": "2024-03-19T13:41:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Charlie Hart"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://charliehart.dev/3d/descending-dudes-en/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "charliehart.dev",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://charliehart.dev/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://charliehart.dev/" accesskey="h" title="charliehart.dev (Alt + H)">charliehart.dev</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://charliehart.dev/de/" title="German"
+                            aria-label=":de:">🇩🇪</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://charliehart.dev/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/2d/" title="2D Projects">
+                    <span>2D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/3d/" title="3D Projects">
+                    <span>3D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/misc/" title="Misc Projects">
+                    <span>Misc Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://charliehart.dev/">Home</a>&nbsp;»&nbsp;<a href="https://charliehart.dev/3d/">3D Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Descending Dudes - Postgraduate 3D Team Project
+    </h1>
+    <div class="post-meta"><span title='2024-03-19 13:41:00 +0000 UTC'>March 19, 2024</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Charlie Hart
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#video" aria-label="Video">Video</a></li>
+                <li>
+                    <a href="#screenshots" aria-label="Screenshots">Screenshots</a></li>
+                <li>
+                    <a href="#team-organisation-and-communication" aria-label="Team Organisation and Communication">Team Organisation and Communication</a><ul>
+                        
+                <li>
+                    <a href="#mini-code-reviews" aria-label="Mini Code Reviews">Mini Code Reviews</a></li></ul>
+                </li>
+                <li>
+                    <a href="#development" aria-label="Development">Development</a><ul>
+                        
+                <li>
+                    <a href="#axial-constraints" aria-label="Axial Constraints">Axial Constraints</a><ul>
+                        
+                <li>
+                    <a href="#usage" aria-label="Usage">Usage</a></li></ul>
+                </li>
+                <li>
+                    <a href="#trigger-volumes" aria-label="Trigger Volumes">Trigger Volumes</a><ul>
+                        
+                <li>
+                    <a href="#usages" aria-label="Usages">Usages</a><ul>
+                        
+                <li>
+                    <a href="#checkpoints-and-respawn-triggers" aria-label="Checkpoints and Respawn Triggers">Checkpoints and Respawn Triggers</a></li>
+                <li>
+                    <a href="#player-detection-boxes" aria-label="Player Detection Boxes">Player Detection Boxes</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#rhino-enemy" aria-label="Rhino Enemy">Rhino Enemy</a></li>
+                <li>
+                    <a href="#map-editorimporter-tool" aria-label="Map editor/importer tool">Map editor/importer tool</a></li>
+                <li>
+                    <a href="#debug-ui-elements" aria-label="Debug UI Elements">Debug UI Elements</a></li></ul>
+                </li>
+                <li>
+                    <a href="#future-work" aria-label="Future Work">Future Work</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &lsquo;Mini-Studio&rsquo; at Newcastle University.</p>
+<p>Our project was created using our own engine in C++, and was based on <a href="https://charliehart.dev/3d/goat-game-en/">the &lsquo;Goat Heist&rsquo; game</a> I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.</p>
+<h2 id="video">Video<a hidden class="anchor" aria-hidden="true" href="#video">#</a></h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/25KI7QYORl8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="screenshots">Screenshots<a hidden class="anchor" aria-hidden="true" href="#screenshots">#</a></h2>
+<p>Level 1 - Gate Gallop</p>
+<img title="" src="https://i.imgur.com/YyG7VYY.png" alt="">
+<p>Level 3 - Obstacle Course</p>
+<img title="" src="https://i.imgur.com/ZKbJJzd.png" alt="">
+<h2 id="team-organisation-and-communication">Team Organisation and Communication<a hidden class="anchor" aria-hidden="true" href="#team-organisation-and-communication">#</a></h2>
+<p>Throughout the project, we used many tools to assist in communication and organisation:</p>
+<ul>
+<li>
+<p><strong>Git</strong>, for Version Control and developing several features in parallel, making use of branches.</p>
+</li>
+<li>
+<p><strong>Jenkins</strong>, for automated building of our project and reporting of issues when a push was made to Git.</p>
+</li>
+<li>
+<p><strong>Microsoft Teams</strong>, for team communication, and the Teams add-on &ldquo;Tasks by Planner&rdquo;, for creating kanban boards to track tasks.</p>
+</li>
+</ul>
+<h3 id="mini-code-reviews">Mini Code Reviews<a hidden class="anchor" aria-hidden="true" href="#mini-code-reviews">#</a></h3>
+<p>In order for a new feature to be merged into the main branch of our repository, we performed &lsquo;Mini Code Reviews&rsquo;, where the member merging the branch would sit down with another member of the team and read through their code, explaining what it does, and ensuring it was ready to be merged.</p>
+<p>I also performed these reviews several times upon the request of other team members, when they required assistance to debug their code, and this really sped up the time it took to fix bugs in our program, maximising the time available to work on other features.</p>
+<h2 id="development">Development<a hidden class="anchor" aria-hidden="true" href="#development">#</a></h2>
+<p>In this section, I&rsquo;ll cover the areas of the game&rsquo;s codebase I worked on.</p>
+<h3 id="axial-constraints">Axial Constraints<a hidden class="anchor" aria-hidden="true" href="#axial-constraints">#</a></h3>
+<p>I added optional axial constraints to physics objects in the engine, per axis, for both linear motion and angular motion.</p>
+<p>For example, an object with constrained linear motion on the  X,Y and Z axis cannot move linearly (change position) as a result of physics calculations, but can rotate.</p>
+<p>The constraint state of a physics object is stored as an eight bit value, where the lowest 6 bits represent a true or false constraint in each of the 3 axis of linear and angular motion.</p>
+<img title="" src="https://i.imgur.com/SQiGWR0.png" alt="">
+<p>Before calculating the new position of an object in the physics tick, a check is performed, and if any axial constraints are applied to the object, the relevant linear or angular velocity component is set to zero.</p>
+<h4 id="usage">Usage<a hidden class="anchor" aria-hidden="true" href="#usage">#</a></h4>
+<p>Axial Constraints were used for both the player and enemies, to ensure that they were unable to rotate on any axis other than Y, therefore constraints on the X and Z angular motion were applied.</p>
+<h3 id="trigger-volumes">Trigger Volumes<a hidden class="anchor" aria-hidden="true" href="#trigger-volumes">#</a></h3>
+<p>Trigger Volumes are another feature I added to the codebase. Trigger Volumes are physics objects which are not &lsquo;solid&rsquo;, that is, no collision resolution is applied to a collision involving one or more Trigger Volumes. However, they will run one or more functions when an object begins to and finishes colliding with the volume.</p>
+<p>As creating a Trigger Volume is as simple as setting the <code>m_isTrigger</code> flag on an object to true, a Trigger Volume can be made of any physics object with any existing collider shape already implemented.</p>
+<h4 id="usages">Usages<a hidden class="anchor" aria-hidden="true" href="#usages">#</a></h4>
+<h5 id="checkpoints-and-respawn-triggers">Checkpoints and Respawn Triggers<a hidden class="anchor" aria-hidden="true" href="#checkpoints-and-respawn-triggers">#</a></h5>
+<p>Trigger Volumes were used for both Checkpoints and Respawn Triggers in this game. When a player enters a Checkpoint trigger, the player&rsquo;s current position and orientation are stored.</p>
+<p>When the player enters a Respawn trigger, their position and orientation are set to these stored values, and their velocity, both linear and angular, are set to zero.</p>
+<p>This allowed us to set exactly where we deemed &lsquo;Out of Bounds&rsquo; for the player, and was a much better method than what was used previously, resetting the player&rsquo;s position to a set value when the players y position was below a certain threshold.</p>
+<h5 id="player-detection-boxes">Player Detection Boxes<a hidden class="anchor" aria-hidden="true" href="#player-detection-boxes">#</a></h5>
+<p>&lsquo;Player Detection Boxes&rsquo; are a type of Trigger Volume that tracks the player objects currently inside the volume, in a <code>std::set&lt;PlayerCharacter*&gt;</code>. These are used by the rhino enemies, to determine the closest player to them, within their patrolled area.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// PlayerDetectorBox.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">class</span> <span class="nc">PlayerDetectorBox</span> <span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">TriggerBox</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="n">onCollisionBegin</span><span class="p">(</span><span class="n">GameObject</span><span class="o">*</span> <span class="n">t_otherObject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">t_otherObject</span><span class="o">-&gt;</span><span class="n">GetType</span><span class="p">()</span> <span class="o">==</span> <span class="n">ObjectType</span><span class="o">::</span><span class="n">Player</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_playersDetected</span><span class="p">.</span><span class="n">insert</span><span class="p">((</span><span class="n">PlayerCharacter</span><span class="o">*</span><span class="p">)</span><span class="n">t_otherObject</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">onCollisionEnd</span><span class="p">(</span><span class="n">GameObject</span><span class="o">*</span> <span class="n">t_otherObject</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">t_otherObject</span><span class="o">-&gt;</span><span class="n">GetType</span><span class="p">()</span> <span class="o">==</span> <span class="n">ObjectType</span><span class="o">::</span><span class="n">Player</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_playersDetected</span><span class="p">.</span><span class="n">erase</span><span class="p">((</span><span class="n">PlayerCharacter</span><span class="o">*</span><span class="p">)</span><span class="n">t_otherObject</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">PlayerCharacter</span><span class="o">*&gt;*</span> <span class="n">getPlayers</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="o">&amp;</span><span class="n">m_playersDetected</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">protected</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">PlayerCharacter</span><span class="o">*&gt;</span> <span class="n">m_playersDetected</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><em>Note that the game did not end up having multiplayer functionality, but at the time this feature was added, multiplayer was still a planned feature.</em></p>
+<h3 id="rhino-enemy">Rhino Enemy<a hidden class="anchor" aria-hidden="true" href="#rhino-enemy">#</a></h3>
+<p>The rhino enemies in the game are state machine controlled, and use the following logic:</p>
+<ul>
+<li>
+<p><code>Idle state</code> - remain still until a player enters the rhino&rsquo;s player detection volume, then enter <code>Targeting state</code>.</p>
+</li>
+<li>
+<p><code>Targeting state</code> - smoothly orients itself towards the nearest player inside the detection volume, and enters <code>Attacking state</code> a set time after entering the <code>Targeting state</code>.</p>
+</li>
+<li>
+<p><code>Attacking state</code> - force is applied in the direction the rhino is pointing, to make it charge in the targeted direction. The rhino does not change its targeted direction after entering this state, so it charges in a straight line. If the rhino leaves it&rsquo;s player detection volume, for example by charging out of it, the rhino will smoothly return to the volume and revert to the <code>Idle state</code>.</p>
+</li>
+</ul>
+<h3 id="map-editorimporter-tool">Map editor/importer tool<a hidden class="anchor" aria-hidden="true" href="#map-editorimporter-tool">#</a></h3>
+<p>In order to design levels for the game, a graphical map editor was required. Hard-coding the positions, sizes and orientations of each element in a level would take far too long, and is not an intuitive way to work.</p>
+<p>I designed a Map Exporter tool for the Unity engine, in C#, which would convert a scene designed in Unity&rsquo;s graphical editor, into a <code>.json</code> file, containing information such as :</p>
+<ul>
+<li>
+<p>Object positions, sizesand  orientations</p>
+</li>
+<li>
+<p>Object Types (Geometry, Player, Rhino, Checkpoint etc)</p>
+</li>
+<li>
+<p>Render Meshes</p>
+</li>
+<li>
+<p>Collider types</p>
+</li>
+<li>
+<p>Physics Object inverse masses</p>
+</li>
+</ul>
+<p>and much more information, where applicable to a given object.</p>
+<p>The graphical map editor in Unity, showing level 4 of the game:</p>
+<img title="" src="https://i.imgur.com/oU4ZAge.png" alt="">
+<p>I then wrote a corresponding tool in C++, making use of <a href="https://rapidjson.org/">The Rapidjson Library</a>, to read a map file in <code>.json</code> format, and spawn the objects in the game world.</p>
+<p>It can also load a map file in at a given offset position, so it is possible to add a stage to the game inbetween existing stages, only the offset position would need to be changed, on the line calling the <code>loadMapFromJSON()</code> function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// MapImporter.h (Snippet)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="k">static</span> <span class="kt">void</span> <span class="n">loadMapFromJSON</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">t_fileName</span><span class="p">,</span> <span class="n">GameWorld</span><span class="o">&amp;</span> <span class="n">t_world</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Vector3</span> <span class="n">t_offset</span> <span class="o">=</span> <span class="n">Vector3</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span></code></pre></div><p>This tool allowed us to spend less time on level design - something not being assessed in this coursework - and more time on implementing other features into our game and engine.</p>
+<h3 id="debug-ui-elements">Debug UI Elements<a hidden class="anchor" aria-hidden="true" href="#debug-ui-elements">#</a></h3>
+<p>Another team member created a Debug UI in the game using ImGUI, which can be accessed by pressing the <code>I</code> key.</p>
+<p>I added several elements to this UI, displaying information such as:</p>
+<ul>
+<li>
+<p>Frame rate in fps, and Frame time in ms</p>
+</li>
+<li>
+<p>Physics tick time in ms</p>
+</li>
+<li>
+<p>Render tick time in ms</p>
+</li>
+<li>
+<p>A representation of the world axes in the viewport</p>
+<img title="" src="https://i.imgur.com/Kw0F82n.png" alt="">
+</li>
+</ul>
+<h2 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h2>
+<ul>
+<li>
+<p>An object tree, where an object can have several child objects that move as the parent moves, would be useful to enable more complex gameplay.</p>
+</li>
+<li>
+<p>The physics system could be optimised, by not checking for collisions between objects pairs, when both are fully constrained.</p>
+</li>
+<li>
+<p>It would be convenient to be able to load a map from a file in any orientation. Currently, it can only be loaded in the orientation it was designed in.</p>
+</li>
+<li>
+<p>Implementation of networking and multiplayer to the game. This would require a redesign of several existing features, and may take some time.</p>
+</li>
+</ul>
+<h3 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h3>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://charliehart.dev/tags/3d/">3D</a></li>
+      <li><a href="https://charliehart.dev/tags/cpp/">cpp</a></li>
+      <li><a href="https://charliehart.dev/tags/pc/">PC</a></li>
+      <li><a href="https://charliehart.dev/tags/university/">University</a></li>
+      <li><a href="https://charliehart.dev/tags/physics/">Physics</a></li>
+      <li><a href="https://charliehart.dev/tags/ai/">AI</a></li>
+      <li><a href="https://charliehart.dev/tags/team-project/">Team Project</a></li>
+      <li><a href="https://charliehart.dev/tags/featured/">Featured</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://charliehart.dev/misc/gameboy-emulator-en/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Creating a Gameboy Emulator - Ongoing</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://charliehart.dev/">charliehart.dev</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
