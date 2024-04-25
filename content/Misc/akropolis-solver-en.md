@@ -7,8 +7,6 @@ tags = ['Misc','C++']
 ShowToc = true
 +++
 
-
-
 ## Github Repository
 
 ## Context
@@ -64,8 +62,6 @@ Different colours of plaza have different numbers of stars on them, for example,
 - random city generation
 
 - multithreading
-
-
 
 ## Results
 
