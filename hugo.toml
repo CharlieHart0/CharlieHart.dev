@@ -112,7 +112,7 @@ weight = 10
     [languages.de.params.homeInfoParams]
   Title = "Charliehart.dev DE"
   Content = """
-Willkommen bei charliehart.dev DE! Die deutsche Version dieser Website befindet sich derzeit noch im Aufbau :/
+Willkommen bei charliehart.dev DE! Die deutsche Version dieser Website befindet sich derzeit noch im Aufbau :/ Bitte besuchen Sie wenn möglich die englische Version.
 """
 
 

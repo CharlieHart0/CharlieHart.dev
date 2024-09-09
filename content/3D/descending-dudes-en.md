@@ -7,7 +7,7 @@ tags = ['3D','C++','PC','University','Physics','AI','Team Project','Featured']
 ShowToc = true
 +++
 
-This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a 'Mini-Studio' at Newcastle University.
+This project was created for my University team project, and is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a 'Mini-Studio' at Newcastle University.
 
 Our project was created using our own engine in C++, and was based on [the 'Goat Heist' game](https://charliehart.dev/3d/goat-game-en/) I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.
 
