@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Realtime Softbody Physics - Postgraduate Dissertation Project | charliehart.dev</title>
+<meta name="keywords" content="3D, C&#43;&#43;, PC, University, Physics, Dissertation, Featured">
+<meta name="description" content="This project was my postgraduate dissertation project, titled &lsquo;Realtime Soft Body Simulation using a Spring-Mass approach&rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:
+The Dissertation document can be found here
+Soft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing.">
+<meta name="author" content="Charlie Hart">
+<link rel="canonical" href="https://charliehart.dev/3d/softbody-physics-diss-en/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://charliehart.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://charliehart.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://charliehart.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://charliehart.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://charliehart.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://charliehart.dev/3d/softbody-physics-diss-en/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Realtime Softbody Physics - Postgraduate Dissertation Project" />
+<meta property="og:description" content="This project was my postgraduate dissertation project, titled &lsquo;Realtime Soft Body Simulation using a Spring-Mass approach&rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:
+The Dissertation document can be found here
+Soft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://charliehart.dev/3d/softbody-physics-diss-en/" /><meta property="article:section" content="3D" />
+<meta property="article:published_time" content="2024-09-08T13:41:00+00:00" />
+<meta property="article:modified_time" content="2024-05-04T13:41:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Realtime Softbody Physics - Postgraduate Dissertation Project"/>
+<meta name="twitter:description" content="This project was my postgraduate dissertation project, titled &lsquo;Realtime Soft Body Simulation using a Spring-Mass approach&rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:
+The Dissertation document can be found here
+Soft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "3D Projects",
+      "item": "https://charliehart.dev/3d/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Realtime Softbody Physics - Postgraduate Dissertation Project",
+      "item": "https://charliehart.dev/3d/softbody-physics-diss-en/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Realtime Softbody Physics - Postgraduate Dissertation Project",
+  "name": "Realtime Softbody Physics - Postgraduate Dissertation Project",
+  "description": "This project was my postgraduate dissertation project, titled \u0026lsquo;Realtime Soft Body Simulation using a Spring-Mass approach\u0026rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:\nThe Dissertation document can be found here\nSoft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing.",
+  "keywords": [
+    "3D", "C++", "PC", "University", "Physics", "Dissertation", "Featured"
+  ],
+  "articleBody": "This project was my postgraduate dissertation project, titled ‘Realtime Soft Body Simulation using a Spring-Mass approach’. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:\nThe Dissertation document can be found here\nSoft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing.\nIn this project, different approaches to soft body physics were investigated, before one was chosen and implemented, alongside a system to render the deformable objects in real time.\nThe implemented systems were then tested, and results showed that at least 64 cube shaped soft bodies were able to be simulated simultaneously, and that the dynamic mesh rendering method used to render deforming meshes was able to render 64 soft bodies in real time at 75.8 frames per second.\nVideo Screenshots Motion of simulated objects like these softbodies can be difficult to show in still images, so I reccommend watching the video above!\nDevelopment / Implementation Physics The soft body simulation approach chosen was the spring-mass approach, where point masses are constrained by a network of spring constraints.\nThe spring constraints implemented acted as both compression and extension springs, where the difference between the current distance between points, and the resting position between the points, is proportional to the force applied to both points in order to return them to the resting position. The spring constant is the value used for this proportional relationship, in force units per distance units.\nAdditionally, a damping factor is used to limit the energy in the system. Depending on how aligned the velocities of the point masses are to the line passing between them, a small force acting against the spring’s force is applied, in order to prevent a runaway system being supplied more and more energy from gravity without any energy sink in this ideal simulation, lacking air resistance or the loss of thermal energy from a material being deformed.\nPoint masses were created at each vertex of a polygonal mesh, and spring constraints were generated between points at the location of each edge on the mesh, with the resting length of each spring set to the distance between the two vertices. The desired total mass of the softbody object and the number of point masses generated is used to equally distribute the mass among the points.\nStability As most polygonal meshes are not designed to be used in this way, they can often be unstable, with edges between vertices unable to form a semi-rigid structure in the desired shape, and deforming into a more stable configuration. This was particularly notable in concave meshes, where overhangs would fold into the object to become more stable.\nWith most simple convex meshes, stability could be achieved by adding springs between vertices that create coplanar faces.\nRendering The existing rendering system used in the engine was not capable of rendering deformable meshes - only skeletal animation was able to move vertices relative to one another, which was not appropriate for soft body objects, able to deform in many different ways, according to the physics system, separate from the GPU.\nTwo methods of rendering the softbodies were used, a wireframe rendering approach, mainly used during development and testing of the physics portion of the project, and a second method, in which a new mesh was generated and uploaded to the GPU for each softbody, every frame, along with calculating the normals of each face’s new location, scale and orientation.\nThis second method is far from ideal, as sending a new mesh from the CPU to the GPU potentially hundreds or thousands of times per frame would be very slow. Improvements are suggested in the further work section below.\nResults As shown in the YouTube video at the top of the page, tests were carried out using an increasing number of softbody objects each time, until unexpected behaviour occurred.\nPhysics Regardless of the rendering method used, the physics simulation began to behave unexpectedly at around 80 objects simulated concurrently. Beyond this point, the physics system would begin to drop physics frames, resulting in wild and unrealistic behaviour from the softbodies.\nRendering It was found that when more than 32 softbodies were rendered concurrently, the GPU memory usage of the fully rendered dynamic mesh method began to be higher than that of the simplified wireframe rendering method. Additionally, beyond this point, the frame render time began to be much higher using the dynamic mesh rendering, than the wireframe rendering.\nHowever, these values were still fairly low, with the most GPU memory used being 2343 MB, only about 200 MB more than the amount used rendering a scene with no softbodies, and the highest frame render time recorded reaching 13ms, still below the 16.666ms required to reach 60 frames per second.\nIn the tests carried out, the physics simulation would consistently fail before the rendering became an issue in any way, as the number of objects increased. This is likely to be the case regardless of the meshes used for the softbodies, as the same mesh is used to generate both the graphical and physical representations of the softbody objects.\nFuture Work With the current rendering method, a new mesh is uploaded to the GPU each frame, for each soft body, and is not optimal. Instead, a vertex shader could be written and used which could take the new vertex positions as uniform variables, and calculate the normal vectors in parallel on the GPU.\nCurrently, only the point masses that form the soft body provide collision detection and resolution for the softbodies. This is sufficient for collisions against large, flat geometry, but wouldn’t function when colliding with rough terrain which would be able to enter the gaps between points. In order to improve the collision detection, more point masses could be added to each face, or alternately, collision detection could be added for each triangular plane on the soft body. The latter method would likely be more efficient, but would be unable to deform around smaller obstacles, like the former method could.\nUsing polygonal meshes, designed to represent objects graphically, as the structure of a physics object introduces some issues. Notably, convex shapes are not stable using the current method of constructing a network of masses at each vertex location, and springs to connect them. It would be useful to explore algorithms that could determine the stability of a given mesh when converted to a spring-mass soft body, and locate effective pairs of points to add spring connections to, in order to stabilise the object.\n",
+  "wordCount" : "1132",
+  "inLanguage": "en",
+  "datePublished": "2024-09-08T13:41:00Z",
+  "dateModified": "2024-05-04T13:41:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Charlie Hart"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://charliehart.dev/3d/softbody-physics-diss-en/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "charliehart.dev",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://charliehart.dev/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://charliehart.dev/" accesskey="h" title="charliehart.dev (Alt + H)">charliehart.dev</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://charliehart.dev/de/" title="German"
+                            aria-label=":de:">🇩🇪</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://charliehart.dev/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/tags/featured/" title="Featured Projects">
+                    <span>Featured Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/2d/" title="2D Projects">
+                    <span>2D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/3d/" title="3D Projects">
+                    <span>3D Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/misc/" title="Misc Projects">
+                    <span>Misc Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://charliehart.dev/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://charliehart.dev/">Home</a>&nbsp;»&nbsp;<a href="https://charliehart.dev/3d/">3D Projects</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Realtime Softbody Physics - Postgraduate Dissertation Project
+    </h1>
+    <div class="post-meta"><span title='2024-05-04 13:41:00 +0000 UTC'>May 4, 2024</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Charlie Hart
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#video" aria-label="Video">Video</a></li>
+                <li>
+                    <a href="#screenshots" aria-label="Screenshots">Screenshots</a></li>
+                <li>
+                    <a href="#development--implementation" aria-label="Development / Implementation">Development / Implementation</a><ul>
+                        
+                <li>
+                    <a href="#physics" aria-label="Physics">Physics</a><ul>
+                        
+                <li>
+                    <a href="#stability" aria-label="Stability">Stability</a></li></ul>
+                </li>
+                <li>
+                    <a href="#rendering" aria-label="Rendering">Rendering</a></li></ul>
+                </li>
+                <li>
+                    <a href="#results" aria-label="Results">Results</a><ul>
+                        
+                <li>
+                    <a href="#physics-1" aria-label="Physics">Physics</a></li>
+                <li>
+                    <a href="#rendering-1" aria-label="Rendering">Rendering</a></li></ul>
+                </li>
+                <li>
+                    <a href="#future-work" aria-label="Future Work">Future Work</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>This project was my postgraduate dissertation project, titled &lsquo;Realtime Soft Body Simulation using a Spring-Mass approach&rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at  the following link:</p>
+<p><a href="https://github.com/CharlieHart0/Softbody-Physics-Dissertation/blob/main/Charlie_Hart_PG_Dissertation-6.pdf">The Dissertation document can be found here</a></p>
+<p>Soft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing.</p>
+<p>In this project, different approaches to soft body physics were investigated, before one was chosen and implemented, alongside a system to render the deformable objects in real time.</p>
+<p>The implemented systems were then tested, and results showed that at least 64 cube shaped soft bodies were able to be simulated simultaneously, and that the dynamic mesh rendering method used to render deforming meshes was able to render 64 soft bodies in real time at 75.8 frames per second.</p>
+<h2 id="video">Video<a hidden class="anchor" aria-hidden="true" href="#video">#</a></h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/oM44gNdXReA" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="screenshots">Screenshots<a hidden class="anchor" aria-hidden="true" href="#screenshots">#</a></h2>
+<p>Motion of simulated objects like these softbodies can be difficult to show in still images, so I reccommend watching the video above!</p>
+<img title="" src="https://i.imgur.com/gRLUkwf.png" alt="">
+<img title="" src="https://i.imgur.com/6o4Tux4.png" alt="">
+<img title="" src="https://i.imgur.com/uDWyoQa.png" alt="">
+<h2 id="development--implementation">Development / Implementation<a hidden class="anchor" aria-hidden="true" href="#development--implementation">#</a></h2>
+<h3 id="physics">Physics<a hidden class="anchor" aria-hidden="true" href="#physics">#</a></h3>
+<p>The soft body simulation approach chosen was the spring-mass approach, where point masses are constrained by a network of spring constraints.</p>
+<p>The spring constraints implemented acted as both compression and extension springs, where the difference between the current distance between points, and the resting position between the points, is proportional to the force applied to both points in order to return them to the resting position. The spring constant is the value used for this proportional relationship, in force units per distance units.</p>
+<p>Additionally, a damping factor is used to limit the energy in the system. Depending on how aligned the velocities of the point masses are to the line passing between them, a small force acting against the spring&rsquo;s force is applied, in order to prevent a runaway system being supplied more and more energy from gravity without any energy sink in this ideal simulation, lacking air resistance or the loss of thermal energy from a material being deformed.</p>
+<p>Point masses were created at each vertex of a polygonal mesh, and spring constraints were generated between points at the location of each edge on the mesh, with the resting length of each spring set to the distance between the two vertices. The desired total mass of the softbody object and the number of point masses generated is used to equally distribute the mass among the points.</p>
+<h4 id="stability">Stability<a hidden class="anchor" aria-hidden="true" href="#stability">#</a></h4>
+<p>As most polygonal meshes are not designed to be used in this way, they can often be unstable, with edges between vertices unable to form a semi-rigid structure in the desired shape, and deforming into a more stable configuration. This was particularly notable in concave meshes, where overhangs would fold into the object to become more stable.</p>
+<p>With most simple convex meshes, stability could be achieved by adding springs between vertices that create coplanar faces.</p>
+<img title="" src="https://i.imgur.com/kVkIn49.png" alt="">
+<h3 id="rendering">Rendering<a hidden class="anchor" aria-hidden="true" href="#rendering">#</a></h3>
+<p>The existing rendering system used in the engine was not capable of rendering deformable meshes - only skeletal animation was able to move vertices relative to one another, which was not appropriate for soft body objects, able to deform in many different ways, according to the physics system, separate from the GPU.</p>
+<p>Two methods of rendering the softbodies were used, a wireframe rendering approach, mainly used during development and testing of the physics portion of the project, and a second method, in which a new mesh was generated and uploaded to the GPU for each softbody, every frame, along with calculating the normals of each face&rsquo;s new location, scale and orientation.</p>
+<p>This second method is far from ideal, as sending a new mesh from the CPU to the GPU potentially hundreds or thousands of times per frame would be very slow. Improvements are suggested in the further work section below.</p>
+<h2 id="results">Results<a hidden class="anchor" aria-hidden="true" href="#results">#</a></h2>
+<p>As shown in the YouTube video at the top of the page, tests were carried out using an increasing number of softbody objects each time, until unexpected behaviour occurred.</p>
+<h3 id="physics-1">Physics<a hidden class="anchor" aria-hidden="true" href="#physics-1">#</a></h3>
+<p>Regardless of the rendering method used, the physics simulation began to behave unexpectedly at around 80 objects simulated concurrently. Beyond this point, the physics system would begin to drop physics frames, resulting in wild and unrealistic behaviour from the softbodies.</p>
+<h3 id="rendering-1">Rendering<a hidden class="anchor" aria-hidden="true" href="#rendering-1">#</a></h3>
+<p>It was found that when more than 32 softbodies were rendered concurrently, the GPU memory usage of the fully rendered dynamic mesh method began to be higher than that of the simplified wireframe rendering method. Additionally, beyond this point, the frame render time began to be much higher using the dynamic mesh rendering, than the wireframe rendering.</p>
+<p>However, these values were still fairly low, with the most GPU memory used being 2343 MB, only about 200 MB more than the amount used rendering a scene with no softbodies, and the highest frame render time recorded reaching 13ms, still below the 16.666ms required to reach 60 frames per second.</p>
+<p>In the tests carried out, the physics simulation would consistently fail before the rendering became an issue in any way, as the number of objects increased. This is likely to be the case regardless of the meshes used for the softbodies, as the same mesh is used to generate both the graphical and physical representations of the softbody objects.</p>
+<h2 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h2>
+<ul>
+<li>
+<p>With the current rendering method, a new mesh is uploaded to the GPU each frame, for each soft body, and is not optimal. Instead, a vertex shader could be written and used which could take the new vertex positions as uniform variables, and calculate the normal vectors in parallel on the GPU.</p>
+</li>
+<li>
+<p>Currently, only the point masses that form the soft body provide collision detection and resolution for  the softbodies. This is sufficient for collisions against large, flat geometry, but wouldn&rsquo;t function when colliding with rough terrain which would be able to enter the gaps between points. In order to improve the collision detection, more point masses could be added to each face, or alternately, collision detection could be added for each triangular plane on the soft body. The latter method would likely be more efficient, but would be unable to deform around smaller obstacles, like the former method could.</p>
+</li>
+<li>
+<p>Using polygonal meshes, designed to represent objects graphically, as the structure of a physics object introduces some issues. Notably, convex shapes are not stable using the current method of constructing a network of masses at each vertex location, and springs to connect them. It would be useful to explore algorithms that could determine the stability of a given mesh when converted to a spring-mass soft body, and locate effective pairs of points to add spring connections to, in order to stabilise the object.</p>
+</li>
+</ul>
+<h3 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h3>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://charliehart.dev/tags/3d/">3D</a></li>
+      <li><a href="https://charliehart.dev/tags/c&#43;&#43;/">C&#43;&#43;</a></li>
+      <li><a href="https://charliehart.dev/tags/pc/">PC</a></li>
+      <li><a href="https://charliehart.dev/tags/university/">University</a></li>
+      <li><a href="https://charliehart.dev/tags/physics/">Physics</a></li>
+      <li><a href="https://charliehart.dev/tags/dissertation/">Dissertation</a></li>
+      <li><a href="https://charliehart.dev/tags/featured/">Featured Projects</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://charliehart.dev/3d/descending-dudes-en/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Descending Dudes - Postgraduate 3D Team Project</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://charliehart.dev/">charliehart.dev</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

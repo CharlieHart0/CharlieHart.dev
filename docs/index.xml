@@ -6,14 +6,23 @@
     <description>Recent content on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 19 Mar 2024 13:41:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2024 13:41:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Realtime Softbody Physics - Postgraduate Dissertation Project</title>
+      <link>https://charliehart.dev/3d/softbody-physics-diss-en/</link>
+      <pubDate>Sat, 04 May 2024 13:41:00 +0000</pubDate>
+      <guid>https://charliehart.dev/3d/softbody-physics-diss-en/</guid>
+      <description>This project was my postgraduate dissertation project, titled &amp;lsquo;Realtime Soft Body Simulation using a Spring-Mass approach&amp;rsquo;. This post can be considered a condensed summary of the dissertation document, and more detailed information can be found at the following link:
+The Dissertation document can be found here
+Soft bodies are physically simulated objects capable of deformation - changing shape in response to forces experienced. Most physical objects in computer simulations are rigid bodies, which do not experience deformation, but soft body physics systems are required in order to simulate complex structures in a physically accurate way, such as clothing.</description>
+    </item>
     <item>
       <title>Descending Dudes - Postgraduate 3D Team Project</title>
       <link>https://charliehart.dev/3d/descending-dudes-en/</link>
       <pubDate>Tue, 19 Mar 2024 13:41:00 +0000</pubDate>
       <guid>https://charliehart.dev/3d/descending-dudes-en/</guid>
-      <description>This project is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &amp;lsquo;Mini-Studio&amp;rsquo; at Newcastle University.
+      <description>This project was created for my University team project, and is a 3D platformer game, in which the player has to reach the end of an obstacle course and achieve the fastest time they can. We created the game as a team of a few students working as a &amp;lsquo;Mini-Studio&amp;rsquo; at Newcastle University.
 Our project was created using our own engine in C++, and was based on the &amp;lsquo;Goat Heist&amp;rsquo; game I created as a previous coursework project; We expanded the codebase significantly, to add a wider range of features to a new game in the engine.</description>
     </item>
     <item>

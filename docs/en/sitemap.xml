@@ -3,19 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://charliehart.dev/tags/3d/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/3d/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
-  </url><url>
-    <loc>https://charliehart.dev/tags/ai/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/c&#43;&#43;/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -27,20 +24,23 @@
                 href="https://charliehart.dev/"
                 />
   </url><url>
-    <loc>https://charliehart.dev/3d/descending-dudes-en/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <loc>https://charliehart.dev/tags/dissertation/</loc>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/featured/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/pc/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/physics/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/3d/softbody-physics-diss-en/</loc>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/</loc>
-    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -52,10 +52,16 @@
                 href="https://charliehart.dev/tags/"
                 />
   </url><url>
-    <loc>https://charliehart.dev/tags/team-project/</loc>
+    <loc>https://charliehart.dev/tags/university/</loc>
+    <lastmod>2024-05-04T13:41:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/ai/</loc>
     <lastmod>2024-03-19T13:41:00+00:00</lastmod>
   </url><url>
-    <loc>https://charliehart.dev/tags/university/</loc>
+    <loc>https://charliehart.dev/3d/descending-dudes-en/</loc>
+    <lastmod>2024-03-19T13:41:00+00:00</lastmod>
+  </url><url>
+    <loc>https://charliehart.dev/tags/team-project/</loc>
     <lastmod>2024-03-19T13:41:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/misc/gameboy-emulator-en/</loc>
@@ -107,9 +113,6 @@
     <lastmod>2023-07-02T14:15:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/tags/c-sharp/</loc>
-    <lastmod>2023-05-07T11:19:00+00:00</lastmod>
-  </url><url>
-    <loc>https://charliehart.dev/tags/dissertation/</loc>
     <lastmod>2023-05-07T11:19:00+00:00</lastmod>
   </url><url>
     <loc>https://charliehart.dev/3d/voxel-world-diss-en/</loc>
