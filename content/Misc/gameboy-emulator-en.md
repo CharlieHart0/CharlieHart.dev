@@ -1,5 +1,5 @@
 +++
-title = 'Creating a Gameboy Emulator - Ongoing'
+title = 'Creating a Gameboy Emulator - Part 1'
 date = 2024-03-03T16:23:00Z
 publishDate = 2024-03-03T16:23:00Z
 draft = false
@@ -7,9 +7,11 @@ tags = ['Ongoing','Gameboy','Misc','Emulation','C++', 'Featured']
 ShowToc = true
 +++
 
-My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.
+My first emulator project is to write a Gameboy emulator, in C++, and is a large project with several stages, so more posts will be made as new sections are added.
 
 At the time of writing, I have implemented the Gameboy's CPU, memory bus and instruction set.
+
+Update 01/10/2024: Part 2 of this project [can be found here.](https://charliehart.dev/misc/gameboy-emulator-part2-en/)
 
 ## Github Repository
 
@@ -74,3 +76,7 @@ The Game Boy's memory is treated as a single long array of 65,535 8 bit values, 
 - Once the graphics have been implemented in the emulator, I will be able to run test programs to ensure that the CPU instructions work correctly
 
 - Following that, both Audio and Input are required.
+  
+  
+  
+  Update 01/10/2024: Part 2 of this project [can be found here.](https://charliehart.dev/misc/gameboy-emulator-part2-en/)
