@@ -6,8 +6,17 @@
     <description>Recent content in Misc Projects on charliehart.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Mar 2024 16:23:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2024 14:23:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating a Gameboy Emulator - Part 2 - Ongoing</title>
+      <link>https://charliehart.dev/misc/gameboy-emulator-part2-en/</link>
+      <pubDate>Tue, 01 Oct 2024 14:23:00 +0000</pubDate>
+      <guid>https://charliehart.dev/misc/gameboy-emulator-part2-en/</guid>
+      <description>This is part 2 of an ongoing project in C++ to create an emulator of the Nintendo Gameboy. Since the last post, I have added a GUI for debugging, including inspectors for the CPU state, the Gameboy&amp;rsquo;s Memory, a visualization of Graphics Memory, and a ROM loader.
+Github Repository https://github.com/CharlieHart0/GameBoyEmu (The project is ongoing, and is not yet fully usable)
+SDL and ImGui ImGui, a C++ GUI library, was used in combination with SDL2 and OpenGL3 to add a GUI to the program, through which different parts of the emulator could be debugged.</description>
+    </item>
     <item>
       <title>Creating a Gameboy Emulator - Part 1</title>
       <link>https://charliehart.dev/misc/gameboy-emulator-en/</link>
