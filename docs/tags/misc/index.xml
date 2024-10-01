@@ -9,15 +9,15 @@
     <lastBuildDate>Sun, 03 Mar 2024 16:23:00 +0000</lastBuildDate>
     <atom:link href="https://charliehart.dev/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Creating a Gameboy Emulator - Ongoing</title>
+      <title>Creating a Gameboy Emulator - Part 1</title>
       <link>https://charliehart.dev/misc/gameboy-emulator-en/</link>
       <pubDate>Sun, 03 Mar 2024 16:23:00 +0000</pubDate>
       <guid>https://charliehart.dev/misc/gameboy-emulator-en/</guid>
-      <description>My first emulator project is to write a Gameboy emulator, in C++, and is a project with several stages, so this post will be updated over time as new sections are added.
+      <description>My first emulator project is to write a Gameboy emulator, in C++, and is a large project with several stages, so more posts will be made as new sections are added.
 At the time of writing, I have implemented the Gameboy&amp;rsquo;s CPU, memory bus and instruction set.
+Update 01/10/2024: Part 2 of this project can be found here.
 Github Repository GitHub - CharlieHart0/GameBoyEmu: A GameBoy emulator
-(The project is ongoing, and cannot yet be used as a full emulator)
-CPU The most important part of the CPU to be modelled is the set of 8 bit registers, of which there are 8, A,B,C,D,E,F,H and L.</description>
+(The project is ongoing, and cannot yet be used as a full emulator)</description>
     </item>
     <item>
       <title>Modding the PS Vita</title>
@@ -27,6 +27,15 @@ CPU The most important part of the CPU to be modelled is the set of 8 bit regist
       <description>I recently modded my PS Vita, using HENkaku and Ensō, so that I was able to install unsigned software, and begin exploring the Vita homebrew community, and potentially make my own games/programs for the system!
 Disclaimers I do not support pirating games, this project was focused on exploring the Vita system and the homebrew created for it!
 I do not claim responsibility for any consequences if you attempt this with your own device, you do so at your own risk and may void the manufacturer&amp;rsquo;s warranty!</description>
+    </item>
+    <item>
+      <title>Creating a Gameboy Emulator - Part 2 - Ongoing</title>
+      <link>https://charliehart.dev/misc/gameboy-emulator-part2-en/</link>
+      <pubDate>Wed, 10 Jan 2024 16:23:00 +0000</pubDate>
+      <guid>https://charliehart.dev/misc/gameboy-emulator-part2-en/</guid>
+      <description>This is part 2 of an ongoing project in C++ to create an emulator of the Nintendo Gameboy. Since the last post, I have added a GUI for debugging, including inspectors for the CPU state, the Gameboy&amp;rsquo;s Memory, a visualization of Graphics Memory, and a ROM loader.
+Github Repository https://github.com/CharlieHart0/GameBoyEmu (The project is ongoing, and is not yet fully usable)
+SDL and ImGui ImGui, a C++ GUI library, was used in combination with SDL2 and OpenGL3 to add a GUI to the program, through which different parts of the emulator could be debugged.</description>
     </item>
   </channel>
 </rss>
