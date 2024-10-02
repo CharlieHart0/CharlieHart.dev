@@ -1,7 +1,6 @@
 +++
 title = 'Creating a Gameboy Emulator - Part 2 - Ongoing'
-date = 2024-10-01T16:23:00Z
-publishDate = 2024-10-01T16:23:00Z
+date = 2024-10-01T14:23:00Z
 draft = false
 tags = ['Ongoing','Gameboy','Misc','Emulation','C++', 'Featured']
 ShowToc = true
